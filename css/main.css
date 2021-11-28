@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth;
+  --my-orange: #ffac40;
+  --timeline-educ: #db4747;
+  --timeline-exper: #ffa837;
+  --timeline-courses: #8abdff;
+  --timeline-music-courses:rgb(93, 167, 97);
+  --timeline-educ-lighted: #ff7d7d;
+  --timeline-exper-lighted: #ffbe6a;
+  --timeline-courses-lighted: #acd0ff;
+  --timeline-music-courses-lighted:rgb(129, 212, 133);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.center {
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+}
+
+.reset-height {
+  margin-top: -50vh;
+}
+
+.fill-height {
+  height: 100vh;
+}
+
+.fill-height-110 {
+  height: 110vh;
+}
+
+.pt-100{
+  padding-top:100px;
+}
+.pt-200{
+  padding-top:200px;
+}
+.pb-100{
+  padding-bottom:100px;
+}
+.pb-200{
+  padding-bottom:200px;
+}
+
+
+.ml-100{
+  margin-left:100px;
+}
+.mr-100{
+  margin-right:100px;
+}
+
+.important-exper{
+  color: var(--timeline-exper);
+}
+
+.important-educ{
+  color: var(--timeline-educ);
+}
+
+.important-exper-lighted{
+  color: var(--timeline-exper-lighted);
+}
+
+.important-educ-lighted{
+  color: var(--timeline-educ-lighted);
+}
+
+
+
+@media (max-width: 1201px) {
+  .hide-md {
+    display: none;
+  }
+}
+
+.show-on.md {
+  display: none;
+}
+
+@media (max-width: 1201px) {
+  .show-on-md {
+    display:block;
+  }
+}
