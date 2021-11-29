@@ -43,10 +43,14 @@ window.addEventListener("scroll", e => {
 
       const pipeLines = document.querySelectorAll('#line-pipe');
       const contactLines = document.querySelectorAll('#mail-phone-frame');
+      var i = 1;
 
       if(current === "about") {
         pipeLines.forEach(pipeLine => {
-          pipeLine.classList.add('line-animate-forward');
+          pipeLine.classList.add('line-animate-forward-'+i);
+          i++;
+          if(i > 4)
+            i == 1;
         });
       }
       if(current === "contact") {

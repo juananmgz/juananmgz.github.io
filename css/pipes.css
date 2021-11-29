@@ -2,10 +2,28 @@
   margin-bottom: -10vh;
 }
 
-.line-animate-forward {
+.line-animate-forward-1 {
 	stroke-dasharray:2300;
 	stroke-dashoffset:2300;
-	animation: dash 2s linear forwards;
+	animation: dash 3s linear forwards;
+}
+
+.line-animate-forward-2 {
+	stroke-dasharray:2300;
+	stroke-dashoffset:2300;
+	animation: dash 2.6s linear forwards;
+}
+
+.line-animate-forward-3 {
+	stroke-dasharray:2300;
+	stroke-dashoffset:2300;
+	animation: dash 2.3s linear forwards;
+}
+
+.line-animate-forward-4 {
+	stroke-dasharray:2300;
+	stroke-dashoffset:2300;
+	animation: dash 2.7s linear forwards;
 }
 
 @keyframes dash {
