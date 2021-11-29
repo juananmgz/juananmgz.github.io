@@ -4,8 +4,6 @@
   width: 70px;
   height: 70px;
   margin: 70px auto;
-  position: relative;
-  z-index: 10;
 }
 
 #home #arrow {

@@ -9,6 +9,7 @@
   overflow: hidden;
   position: relative;
   top: 0;
+  z-index: -1;
 }
 
 .circle-container {
