@@ -82,6 +82,12 @@
   outline: none !important;
 }
 
+@media (min-width: 1080px) {
+  .ftco-navbar-light .navbar-brand {
+    margin-left: 100px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
     padding: 10px 15px;

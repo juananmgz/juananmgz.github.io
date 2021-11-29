@@ -51,13 +51,21 @@
   z-index: -1;
 }
 
-/* ABOUT  */
+@media (max-width: 991.98px) {
+  .home-text .home-name {
+    font-size: 40px;
+  }
 
-@media (max-width: 767.98px) {
-  .about-profile-pic {
-    padding-bottom: 20px;
+  .home-text .home-desc {
+    font-size: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 30px !important;
   }
 }
+
+/* ABOUT  */
+
 
 #about .about-desc {
   padding: 40px;
@@ -113,6 +121,15 @@
   background: #000;
 }
 
+@media (max-width: 767.98px) {
+  .about-profile-pic {
+    padding-bottom: 20px;
+  }
+
+  #about .about-desc {
+    padding: 40px 20px;
+  }
+}
 
 /* EXPERIENCE & EDUCATION */
 
