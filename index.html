@@ -32,7 +32,7 @@
     <!-- MENÚ NAVEGACIÓN -->
     <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light fixed-top" id="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#home">JAMG</a>
+        <a class="navbar-brand" href="#">JAMG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jamg-navbar" aria-controls="jamg-navbar" aria-expanded="false" aria-label="Toggle navigation" onclick="this.classList.toggle('navmenu-active')">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 200 200">
             <g stroke-width="6" stroke-linecap="round">
@@ -45,7 +45,7 @@
             </g>
           </svg>
         </button>
-        <div class="collapse navbar-collapse" id="jamg-navbar">
+        <div class="collapse navbar-collapse has-dropdown is-hoverable" id="jamg-navbar">
           <ul class="navbar-nav ml-auto mr-md-3 ">
             <li id="nav-about" class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
             <li id="nav-exper-educ" class="nav-item"><a href="#exper-educ" class="nav-link">EXPERIENCE & EDUCATION</a></li>
@@ -77,6 +77,9 @@
                 </svg>
               </a>
             </div>
+
+
+
 
             <div class="particles-container reset-height">
               <div class="circle-container">
@@ -159,7 +162,7 @@
               </div>
               <div class="circle-container">
                 <div class="circle"></div>
-              </div>
+              </div><!--
               <div class="circle-container">
                 <div class="circle"></div>
               </div>
@@ -229,12 +232,13 @@
               <div class="circle-container">
                 <div class="circle"></div>
               </div>
+          -->
             </div>
           </div>
         </section>
 
 
-        <section id="about">
+        <section id="about" class="reset-height-soft">
           <div class="container">
             <div class="row">
               <div class="col-xl-8 mx-auto text-center">
@@ -249,7 +253,7 @@
                 <img src="img/profile-pic.png" class="img-fluid about-profile-pic b-shadow-a mx-auto d-block">
               </div>
               <div class="col-xl-9 col-md-8 col-sm-12 about-text text-justify">
-                <p> Welcome! I'm Juanan, a computer engineer specialized in <span style="color: var(--timeline-exper)">Web Development & Agile Methodologies</span>. My preferences are interface design and user experience (UI & UX) based on Human-Computer Interaction (HCP). My goal is to make intuitive and user-friendly websites and web applications.</p>
+                <p> Welcome! I'm Juanan, a computer engineer specialized in <span style="color: var(--timeline-exper)">Web Development & Agile Methodologies</span>. My preferences are interface design and user experience <span style="color: var(--timeline-educ-lighted)">(UI & UX)</span> based on <span style="color: var(--timeline-educ-lighted)">Human-Computer Interaction (HCP)</span>. My goal is to make intuitive and user-friendly websites and web applications.</p>
 
                 <p>I consider myself a very responsible and committed person, with a high level of <span style="color: var(--timeline-exper)">perfectionism and detail</span>. I want everything I do to have the best possible result within my knowledge and experience. I am motivated to learn, correct and above all improve my skills in order to achieve the objective of the project.</p>
 
@@ -566,12 +570,14 @@
                 <p>
                   <span>Adobe Illustrator</span>
                   <span>Adobe Photoshop</span>
+                  <span>APIs REST</span>
                   <span>Arduino</span>
                   <span>Autodesk Fusion 360</span>
                   <span>Bash</span>
                   <span>C</span>
                   <span>C#</span>
                   <span>C++</span>
+                  <span>CGI</span>
                   <span>EJS</span>
                   <span>Linux</span>
                   <span>MongoDB</span>
@@ -581,6 +587,7 @@
                   <span>PHP</span>
                   <span>Prusa Slicer</span>
                   <span>Python</span>
+                  <span>Servlets</span>
                   <span>SSH</span>
                   <span>UML</span>
                   <span>Unity</span>
@@ -630,11 +637,19 @@
                 </div>
               </div>
             <div class="row">
-              <div class="col-xl-4 offset-xl-1 col-sm-6 offset-sm-3">
+              <div class="project-img-1 col-xl-4 offset-xl-1 col-sm-6 offset-sm-3">
                 <img src="img/portfolio-mobile-frame.png" class="img-fluid about-profile-pic b-shadow-a mx-auto d-block">
               </div>
-              <div class="col-xl-5 offset-xl-1 col-md-12">
+              <div class="project-img-2 col-xl-5 offset-xl-1 col-md-12">
                 <img src="img/portfolio-e-gaita.png" class="img-fluid about-profile-pic b-shadow-a mx-auto d-block">
+              </div>
+              <div class="col-xl-6 offset-xl-3 col-sm-10 offset-sm-1">
+                <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio ">
+                  <div class="wp-block-embed__wrapper rainbow">
+                    <iframe title="Dissecting Hibiscus" width="640" height="360" src="https://www.youtube.com/embed/2i9cVCXLpXM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                    </iframe>
+                  </div>
+                </figure>
               </div>
               <div class="col-10 offset-1" style="color: #fff">
                 <h3 class="col-12 text-justify" style="color: var(--my-orange)" >Articles Related</h3>
@@ -643,7 +658,6 @@
                     <h5 class="mb-4">A platform for e-learning of traditional three-hole wind instruments. <cite style="font-weight: 300; font-size: 1rem">DiTTEt 2021 - Volume 1410: New Trends in Disruptive Technologies, Tech Ethics and A. Intelligence <span class="show-on-md">[<a href="https://link.springer.com/chapter/10.1007/978-3-030-87687-6_33" style="color: var(--my-orange); text-decoration: none;">Online <i class="fa fa-angle-double-right"></i></a>]</span></cite></h5>
 
                     <h5>EGaita: A platform for e-learning of traditional three-hole wind instruments through gamification. <cite style="font-weight: 300; font-size: 1rem">MDPI <span class="show-on-md">[<a href="" style="color: var(--timeline-educ); text-decoration: none;">Publishing soon</a>]</span></cite></h5>
-
                   </article>
                 </div>
               </div>

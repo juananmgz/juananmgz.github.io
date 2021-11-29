@@ -25,7 +25,11 @@ body {
 }
 
 .reset-height {
-  margin-top: -50vh;
+  margin-top: -80vh;
+}
+
+.reset-height-soft {
+  margin-top: -25vh;
 }
 
 .fill-height {
