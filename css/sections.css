@@ -634,6 +634,13 @@
 }
 
 @media (max-width: 577px) {
+  #portfolio .project-video {
+    margin-left:7px;
+    margin-right:7px;
+  }
+}
+
+@media (max-width: 577px) {
   #portfolio .project-img-1 {
     margin-right: 10%;
     margin-left: 10%;
