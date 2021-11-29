@@ -42,7 +42,7 @@ window.addEventListener("scroll", e => {
       li.classList.add('active');
 
       const pipeLines = document.querySelectorAll('#line-pipe');
-      const contactLines = document.querySelectorAll('#contact-lines-mail-phone');
+      const contactLines = document.querySelectorAll('#mail-phone-frame');
 
       if(current === "about") {
         pipeLines.forEach(pipeLine => {

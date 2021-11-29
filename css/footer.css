@@ -3,8 +3,6 @@
 
 .effect {
   width: 100%;
-  padding-top: 200px;
-  margin-top: -200px;
   background-color: none;
 }
 
@@ -76,19 +74,19 @@
 
 
 /*lines above*/
-.contact-lines svg .linetop-1 {
+.contact-lines svg .contact-line-1 {
   stroke-dasharray: 1300;
-  animation: dashtop 2s linear  ;
-  -webkit-animation: dashtop 2s linear ;
+  animation: dashtop 1.5s linear;
+  -webkit-animation: dashlines 1.5s linear ;
 }
 
-.contact-lines svg .linetop-2 {
+.contact-lines svg .contact-line-2 {
   stroke-dasharray: 1300;
-  animation: dashtop 1.5s linear  ;
-  -webkit-animation: dashtop 1.5s linear ;
+  animation: dashtop 4s linear;
+  -webkit-animation: dashlines 4s linear ;
 }
 
-@keyframes dashtop {
+@keyframes dashlines {
   from {
     stroke-dashoffset: 1300;
   }
@@ -96,37 +94,7 @@
     stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes dashtop {
-  from {
-    stroke-dashoffset: 1300;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-/*lines below*/
-.contact-lines svg .linebottom-1 {
-  stroke-dasharray: 1300;
-  animation: dashbottom 1.5s linear   ;
-  -webkit-animation: dashbottom 1.5s linear ;
-}
-
-.contact-lines svg .linebottom-2 {
-  stroke-dasharray: 1300;
-  animation: dashbottom 2s linear   ;
-  -webkit-animation: dashbottom 2s linear ;
-}
-
-@keyframes dashbottom {
-  from {
-    stroke-dashoffset: 1300;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes dashbottom {
+@-webkit-keyframes dashlines {
   from {
     stroke-dashoffset: 1300;
   }
@@ -136,6 +104,8 @@
 }
 
 .svg-tl-line,
+.svg-tr-line,
+.svg-bl-line,
 .svg-br-line
 {
 	width: 100%;
@@ -143,24 +113,44 @@
 	z-index: 1;
 }
 
-.svg-br-line, .svg-tl-line {
-  height: 21px;
+.svg-tl-line
+{
+	top: 15%;
+  left:0px;
+  height: 20px;
 }
 
-.svg-tl-line {
-  margin-bottom: 13px;
-}
-.svg-br-line {
-  margin-bottom: -7px;
+.svg-tr-line
+{
+	top: 0px;
+	right: 15%;
+	height:100%;
+  margin-top: -16px;
+  margin-bottom: -90px;
 }
 
-.mail-phone-border-wrap {
-  position: relative;
-  z-index: 1;
-  border: 2px solid black;
-  margin-top: 0px;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-left: 0px;
-  margin-bottom: 0px;
+.svg-bl-line
+{
+	bottom: 0px;
+	height:100%;
+  margin-bottom: -23px;
+}
+
+.svg-br-line
+{
+	bottom: 0px;
+	right: 0px;
+  height: 20px;
+  margin-top: -16px;
+}
+
+.mail-phone-frame > div{
+  margin-bottom: -90px;
+}
+
+
+@media (max-width: 991.98px) {
+  .svg-bl-line line, .svg-tr-line line {
+    display: none;
+  }
 }

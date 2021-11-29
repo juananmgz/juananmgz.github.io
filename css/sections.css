@@ -52,32 +52,66 @@
 
 /* ABOUT  */
 
-#about .about-card > div > div {
-  background: #fff;
-  border-radius: 10px;
-}
-
 @media (max-width: 767.98px) {
-  #about .about-card > div {
-    padding-left: 15px;
-    padding-right: 15px;
+  .about-profile-pic {
+    padding-bottom: 20px;
   }
 }
 
-#about .about-card p {
-  padding-bottom: 10px;
-  white-space: pre-line;
+#about .about-desc {
+  padding: 40px;
 }
 
-#about .about-card .about-text {
-  padding: 20px 40px;
+#about .about-text {
+  color: #fff;
+  background-color:rgba(0, 0, 0, 0.6);
 }
 
-#about .about-card .about-profile-pic {
-  max-height: 20vh;
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.rainbow {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.rainbow::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -200%;
+  top: -200%;
+  width: 500%;
+  height: 500%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--my-orange), var(--my-orange)), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  -webkit-animation: rotate 40s linear infinite;
+          animation: rotate 40s linear infinite;
 }
 
 
+.rainbow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: #000;
+}
 
 /* EXPERIENCE & EDUCATION */
 
@@ -414,6 +448,18 @@
   }
 }
 
+#other-skills {
+  font-size: 18px;
+  color: #fff;
+  line-height: 50px;
+}
+
+#other-skills span{
+  margin-right: 10px;
+  border: 2px solid var(--timeline-music-courses-lighted);
+  padding: 6px 15px;
+}
+
 
 /* PORTFOLIO */
 
@@ -481,7 +527,8 @@
 }
 
 
-#portfolio .last-project, #contact .effect {
+#portfolio .last-project {
+
   border: 2px solid #fff;
   border-top: 0px;
 }
@@ -625,6 +672,21 @@
   -webkit-transform: translateZ(1em);
   transform: translateZ(1em);
 }
+
+@media (max-width: 1201px) {
+  .award {
+    left: 34%;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .award {
+    left: 30%;
+  }
+}
+
+
 .award.gold {
   box-shadow: inset -0.08em -0.08em 0 #b67d05, 0.1em 0.13333em 0 rgba(0, 0, 0, 0.1);
   border-color: #fadd40;
@@ -693,13 +755,23 @@
 
 /* CONTACT */
 
-.mail-phone {
-  position: relative;
-  z-index: 1;
-  border: 2px solid black;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-left: 0px;
-  padding: 62px 0px 62px 0px;
-  margin: 0px;
+#contact h5 {
+  line-height:40px;
+}
+
+#contact .effect {
+  margin-top: 70px;
+  border: 2px solid white;
+}
+
+@media (min-width: 1201px) {
+  .mail-padding br {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .mail-padding {
+    padding-right: 7%;
+  }
 }
