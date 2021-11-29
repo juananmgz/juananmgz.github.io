@@ -96,7 +96,7 @@
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(var(--my-orange), var(--my-orange)), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(var(--my-orange), var(--my-orange)), linear-gradient(var(--my-orange), var(--my-orange)), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
   -webkit-animation: rotate 40s linear infinite;
           animation: rotate 40s linear infinite;
 }
