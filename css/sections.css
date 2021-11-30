@@ -263,7 +263,7 @@
 
 #exper-educ #courses h5,
 #exper-educ #music-courses h5 {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 @media (max-width: 991.98px) {
@@ -810,7 +810,6 @@
 
 #contact .effect {
   margin-top: 70px;
-  border: 2px solid white;
 }
 
 @media (min-width: 1201px) {
@@ -832,7 +831,7 @@
 }
 
 .effect .buttons {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
