@@ -257,12 +257,14 @@
   padding: 0px;
 }
 
-
 #exper-educ li .timeline_content > h5 {
-  font-size: 1rem;
   margin-bottom: 20px;
 }
 
+#exper-educ #courses h5,
+#exper-educ #music-courses h5 {
+  font-size: 1rem;
+}
 
 @media (max-width: 991.98px) {
   #exper-educ ul.timeline-list:before {
