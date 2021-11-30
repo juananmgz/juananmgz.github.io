@@ -892,7 +892,7 @@
   transform: rotate(45deg);
 }
 
-.effect.thurio .social-button i {
+.effect.thurio .social-button i, .effect.thurio .social-button span {
   transition: transform 0.01s linear 0s;
   transform: rotate(-45deg);
 }
