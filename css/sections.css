@@ -849,7 +849,6 @@
 /* styles for a common effect !!!YOU NEED THEM */
 
 .effect .buttons .social-button {
-  text-decoration: none !important;
   width: 60px;
   height: 60px;
   display: flex;
@@ -863,22 +862,27 @@
   position: relative;
   border: 2px solid #fff;
 }
+
 .effect .buttons .social-button a i {
   position: relative;
   z-index: 3;
+  display: inline-block;
+  vertical-align: middle;
 }
+
 .effect .buttons .social-button a:last-child {
-  margin-left: 3px;
+  margin-top: -5px;
 }
+
 .effect .buttons .social-button a:before {
   content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-.effect .buttons .social-button a i {
-  display: inline-block;
-  vertical-align: middle;
+
+.effect .buttons .in {
+  text-decoration: none !important;
 }
 
 
@@ -887,10 +891,12 @@
   transition: border-radius 0.2s linear 0s;
   transform: rotate(45deg);
 }
+
 .effect.thurio .social-button i {
   transition: transform 0.01s linear 0s;
   transform: rotate(-45deg);
 }
+
 .effect.thurio .social-button:hover {
   border-radius: 0px;
 }
