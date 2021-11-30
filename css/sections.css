@@ -830,7 +830,7 @@
 }
 
 .effect .buttons {
-  margin-top: 50px;
+  margin-top: 0;
   margin-bottom: 50px;
 }
 
@@ -841,6 +841,7 @@
 
 .effect > div {
   margin-top: 50px;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
 }

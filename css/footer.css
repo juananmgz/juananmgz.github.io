@@ -1,9 +1,11 @@
 footer {
   height: 120px;
-  background-color:rgba(0, 0, 0, 0.6);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
+
+
   color: #fff;
 }
-
 
 footer .footer-logo {
   border: 2px solid #fff;
