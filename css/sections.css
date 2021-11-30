@@ -906,7 +906,8 @@
   transform: rotate(45deg);
 }
 
-.effect.thurio .social-button i, .effect.thurio .social-button span {
+.effect.thurio .social-button i,
+.effect.thurio .social-button.cv svg {
   transition: transform 0.01s linear 0s;
   transform: rotate(-45deg);
 }
