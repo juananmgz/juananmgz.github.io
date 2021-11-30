@@ -34,6 +34,7 @@
 .home-desc {
   color: var(--my-orange);
   font-size: 40px;
+  font-weight: 300;
 }
 
 .home-text {
