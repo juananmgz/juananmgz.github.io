@@ -904,6 +904,14 @@
 
 
 /*lines above*/
+.mail-phone-frame svg {
+  opacity: 0;
+}
+
+.contact-lines svg {
+  opacity: 1 !important;
+}
+
 .contact-lines svg .contact-line-1 {
   stroke-dasharray: 1300;
   animation: dashtop 1.5s linear;
@@ -943,6 +951,7 @@
 	z-index: 1;
 }
 
+
 .svg-tl-line
 {
 	top: 15%;
@@ -974,7 +983,7 @@
   margin-top: -16px;
 }
 
-.mail-phone-frame > div{
+.mail-phone-frame > div {
   margin-bottom: -90px;
 }
 
