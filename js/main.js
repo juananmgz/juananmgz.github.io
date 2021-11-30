@@ -1,17 +1,11 @@
-(function($) {
-
-	"use strict";
-
-	$('nav .dropdown').hover(function(){
-		var $this = $(this);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		$this.find('.dropdown-menu').addClass('show');
-	}, function(){
-		var $this = $(this);
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			$this.find('.dropdown-menu').removeClass('show');
-	});
-
+$(document).ready(function() {
+  $(document).click(
+     function(event) {
+        var target = $(event.target);
+        var _mobileMenuOpen = $(".navbar-collapse").hasClass("show");
+        if (_mobileMenuOpen === true && !target.hasClass("navbar-toggler")) {
+           $("button.navbar-toggler").click();
+        }
+     }
+  );
 });
