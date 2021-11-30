@@ -399,6 +399,7 @@
   font-size: 18px;
   color: #fff;
   margin: 0 0 7px;
+  font-weight: 400;
 }
 
 .progress{
@@ -471,6 +472,7 @@
   margin-right: 10px;
   border: 2px solid var(--timeline-music-courses-lighted);
   padding: 6px 15px;
+  font-weight: 400;
   white-space:nowrap;
 }
 
