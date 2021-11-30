@@ -467,10 +467,22 @@
   line-height: 50px;
 }
 
-#other-skills span{
+#other-skills div span{
   margin-right: 10px;
   border: 2px solid var(--timeline-music-courses-lighted);
   padding: 6px 15px;
+  white-space:nowrap;
+}
+
+#other-skills div {
+  text-align: center;
+}
+
+@media (min-width: 577px) {
+  #other-skills div {
+    text-align: justify;
+    text-align-last: center;
+  }
 }
 
 
