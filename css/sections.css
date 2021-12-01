@@ -190,7 +190,7 @@
   border: 2px solid var(--timeline-exper);
 }
 
-#exper-educ .educ .timeline_content p, #exper-educ .exper .timeline_content p {
+#exper-educ .educ .timeline_content p.desc, #exper-educ .exper .timeline_content p.desc {
   text-align: justify;
 }
 
