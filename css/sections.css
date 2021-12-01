@@ -939,6 +939,7 @@
 
 .effect.thurio .social-button:hover {
   border-radius: 0px;
+  border-color: var(--my-orange);
 }
 
 
