@@ -337,6 +337,7 @@
 }
 
 #courses .row > div > span {
+  font-family: poppins;
   color: var(--timeline-courses);
 }
 
@@ -363,7 +364,12 @@
 }
 
 #music-courses .row > div > span {
+  font-family: poppins;
   color: var(--timeline-music-courses-lighted);
+}
+
+#courses .row > div > span > h4, #music-courses .row > div > span > h4 {
+  font-size: 22px;
 }
 
 @media (max-width: 991.98px) {
