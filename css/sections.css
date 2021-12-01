@@ -189,7 +189,7 @@
   border: 2px solid var(--timeline-exper);
 }
 
-#exper-educ .educ .timeline_content p, #exper-educ .exper .timeline_content p {
+#exper-educ .educ .timeline_content p.desc, #exper-educ .exper .timeline_content p.desc {
   text-align: justify;
 }
 
@@ -302,7 +302,9 @@
     top: 0;
   }
 
-  #exper-educ .section-title p:after, #exper-educ ul:last-child:after {
+  #exper-educ .section-title p:after,
+  #exper-educ li:last-child:after,
+  #exper-educ ul:last-child:after {
     display: none
   }
 
@@ -323,23 +325,12 @@
     float: right;
     text-align: left;
   }
-
-  .exp-padding {
-    padding-right: 3%;
-  }
-  .edu-padding {
-    padding-left: 3%;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .exp-padding {
+  .exp-educ-padding {
     padding-right: 0;
-  }
-  .edu-padding {
     padding-left: 0;
   }
 }
+
 
 /* SUBSECC - COURSES */
 
