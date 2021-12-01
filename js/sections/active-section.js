@@ -1,6 +1,6 @@
 var navbar = document.getElementById("navbar");
 
-/* NAVBAR - ON TOP */
+/* NAVBAR - RESIZE ON SCROLLING */
 
 var atTop = false;
 var x = "";
@@ -31,7 +31,7 @@ window.addEventListener("scroll", e => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if(scrollY >= (sectionTop - sectionHeight / 3)) {
+    if(scrollY >= ((sectionTop - sectionHeight / 3) + 150)) {
       current = section.getAttribute('id');
     }
   });

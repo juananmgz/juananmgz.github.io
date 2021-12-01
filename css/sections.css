@@ -146,11 +146,10 @@
   border-radius: 50%;
 }
 
-.exp-padding {
-  padding-right: 7%;
-}
-.edu-padding {
-  padding-left: 8%;
+.exp-educ-padding {
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: 30px;
 }
 
 #exper-educ ul.timeline-list {
