@@ -26,6 +26,7 @@ const navLi = document.querySelectorAll('nav .container-fluid div ul li');
 
 window.addEventListener("scroll", e => {
   let current = '';
+  let currentForAnimations = '';
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
@@ -33,6 +34,10 @@ window.addEventListener("scroll", e => {
 
     if(scrollY >= (sectionTop - sectionHeight / 3)) {
       current = section.getAttribute('id');
+    }
+
+    if(scrollY >= ((sectionTop - sectionHeight / 3) - 200)) {
+      currentForAnimations = section.getAttribute('id');
     }
   });
 
@@ -53,7 +58,7 @@ window.addEventListener("scroll", e => {
             i == 1;
         });
       }
-      if(current === "contact") {
+      if(currentForAnimations === "contact") {
         contactLines.forEach(contactLine => {
           contactLine.classList.add('contact-lines');
         });

@@ -23,10 +23,12 @@
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+  transition: all 300ms;
   color: var(--my-orange);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:active {
+  transition: all 300ms;
   color: var(--my-orange);
 }
 

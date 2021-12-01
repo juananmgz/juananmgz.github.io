@@ -43,7 +43,7 @@
 
 #bg-image-home {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: url("/img/index-bg.jpeg") top center no-repeat !important;
   background-size: cover;
   position: fixed;
@@ -190,6 +190,10 @@
   border: 2px solid var(--timeline-exper);
 }
 
+#exper-educ .educ .timeline_content p.desc, #exper-educ .exper .timeline_content p.desc {
+  text-align: justify;
+}
+
 #exper-educ ul.timeline-list li .timeline_content {
   width: 45%;
   color: #fff;
@@ -204,7 +208,7 @@
 }
 
 #exper-educ .timeline_content h4 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin: 10px 0;
 }
@@ -254,7 +258,7 @@
   color: var(--timeline-exper);
 }
 
-#exper-educ .timeline_content ul {
+#exper-educ li .timeline_content ul {
   padding: 0px;
 }
 
@@ -267,6 +271,31 @@
   font-size: 16px;
 }
 
+#exper-educ li:last-child:after {
+  position: absolute;
+  background-color: #fff;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+
+#exper-educ ul:last-child:after {
+  position: absolute;
+  background-color: #000;
+  content: "";
+  width: 6px;
+  height: 6px;
+  bottom: -2px;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 50%;
+}
+
+
 @media (max-width: 991.98px) {
   #exper-educ ul.timeline-list:before {
     position: absolute;
@@ -274,7 +303,9 @@
     top: 0;
   }
 
-  #exper-educ .section-title p:after {
+  #exper-educ .section-title p:after,
+  #exper-educ li:last-child:after,
+  #exper-educ ul:last-child:after {
     display: none
   }
 
@@ -303,7 +334,6 @@
     padding-left: 3%;
   }
 }
-
 
 @media (max-width: 767.98px) {
   .exp-padding {
@@ -338,6 +368,7 @@
 }
 
 #courses .row > div > span {
+  font-family: poppins;
   color: var(--timeline-courses);
 }
 
@@ -364,7 +395,12 @@
 }
 
 #music-courses .row > div > span {
+  font-family: poppins;
   color: var(--timeline-music-courses-lighted);
+}
+
+#courses .row > div > span > h4, #music-courses .row > div > span > h4 {
+  font-size: 20px;
 }
 
 @media (max-width: 991.98px) {
