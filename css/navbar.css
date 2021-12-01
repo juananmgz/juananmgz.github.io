@@ -9,16 +9,6 @@
   transition: all 300ms;
 }
 
-.ftco-navbar-light .navbar-brand {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
-  color: #fff;
-}
-
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   font-size: 16px;
   padding-top: 1.2rem;
