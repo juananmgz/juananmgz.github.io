@@ -1,6 +1,6 @@
 var navbar = document.getElementById("navbar");
 
-/* NAVBAR - RESIZE ON SCROLLING */
+/* NAVBAR - ON TOP */
 
 var atTop = false;
 var x = "";
