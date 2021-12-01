@@ -500,7 +500,7 @@
 
 #other-skills div span{
   margin-right: 10px;
-  border: 2px solid var(--timeline-music-courses-lighted);
+  border: 2px solid var(--border-color);
   padding: 6px 15px;
   font-weight: 400;
   white-space:nowrap;
