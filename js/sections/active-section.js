@@ -32,11 +32,7 @@ window.addEventListener("scroll", e => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-<<<<<<< HEAD
-    if(scrollY >= ((sectionTop - sectionHeight / 3) + 110)) {
-=======
     if(scrollY >= (sectionTop - sectionHeight / 3)) {
->>>>>>> parent of 7eebc08 (:bookmark:-1.6.7)
       current = section.getAttribute('id');
     }
 
