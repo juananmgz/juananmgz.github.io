@@ -31,8 +31,12 @@ window.addEventListener("scroll", e => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
+    var x = 0;
 
-    if(scrollY >= (sectionTop - sectionHeight / 3)) {
+    if (section.id === "exper-educ")
+      x = section.clientHeight/5;
+
+    if(scrollY >= (sectionTop - sectionHeight / 3) + x) {
       current = section.getAttribute('id');
     }
 

@@ -134,6 +134,10 @@
 
 /* EXPERIENCE & EDUCATION */
 
+#exper-educ {
+  margin-top: -40vh;
+}
+
 #exper-educ .section-title p:after {
   position: absolute;
   background-color: #fff;
