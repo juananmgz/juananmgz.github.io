@@ -150,11 +150,10 @@
   border-radius: 50%;
 }
 
-.exp-padding {
-  padding-right: 7%;
-}
-.edu-padding {
-  padding-left: 8%;
+.exp-educ-padding {
+  padding-right: 2%;
+  padding-left: 2%;
+  font-size: 30px;
 }
 
 #exper-educ ul.timeline-list {
@@ -330,12 +329,15 @@
     float: right;
     text-align: left;
   }
+}
+
+
+@media (max-width: 771.98px) {
   .exp-educ-padding {
     padding-right: 0;
     padding-left: 0;
   }
 }
-
 
 /* SUBSECC - COURSES */
 
