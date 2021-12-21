@@ -758,7 +758,7 @@
 
 .award {
   position: relative;
-  left: 30%;
+  left: 33.33%;
   font-size: 2.25em;
   font-weight: 600;
   margin: 0.88889em;
@@ -781,18 +781,19 @@
   transform: translateZ(1em);
 }
 
-@media (max-width: 1201px) {
+
+@media (max-width: 991.98px) {
   .award {
-    left: 34%;
+    left: 37%;
   }
 }
 
-
-@media (max-width: 991.98px) {
+@media (max-width: 430px) {
   .award {
     left: 30%;
   }
 }
+
 
 
 .award.gold {
