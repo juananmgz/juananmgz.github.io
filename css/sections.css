@@ -506,7 +506,14 @@
   border: 2px solid var(--border-color);
   padding: 6px 15px;
   font-weight: 400;
-  white-space:nowrap;
+  white-space: nowrap;
+}
+
+#other-skills div span.none-style{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-weight: 400;
 }
 
 #other-skills div {
@@ -514,9 +521,14 @@
 }
 
 @media (min-width: 577px) {
+
   #other-skills div {
     text-align: justify;
     text-align-last: center;
+  }
+
+  #other-skills div.nojustify {
+    text-align: center;
   }
 }
 
