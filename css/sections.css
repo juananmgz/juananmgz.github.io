@@ -574,11 +574,22 @@
   transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
+#skills .btn.ready-to-show {
+  animation: rotate-iddle 1.75s infinite;
+}
+
 #skills .btn:hover {
   color: var(--base-white);
-  border: none;
   border: solid 2px var(--base-white);
   animation: rotate 0.7s ease-in-out both;
+}
+
+@keyframes rotate-iddle {
+  0%{ transform: rotate(0deg); }
+  10%{ transform: rotate(1deg); }
+  20%{ transform: rotate(-1deg); }
+  30%{ transform: rotate(0.5deg); }
+  100%{ transform: rotate(0deg); }
 }
 
 @keyframes rotate {
