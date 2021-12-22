@@ -269,8 +269,7 @@
   margin-bottom: 20px;
 }
 
-#exper-educ #courses h5,
-#exper-educ #music-courses h5 {
+#exper-educ #courses h5 {
   font-size: 16px;
 }
 
@@ -346,83 +345,22 @@
   padding-top: 100px;
 }
 
-#courses .row > div {
+#courses .row > div > div {
   color: var(--base-white);
-  margin-bottom: 10px;
-  margin-left: 4%;
-  margin-right: 1%;
   padding: 30px;
-  border: 2px solid var(--timeline-courses);
-  width: 45%;
-  max-width: 45%;
+  border: 2px solid var(--border-color);
+  height: 100%;
   background-color:rgba(0, 0, 0, 0.6);
 }
 
-#courses .row > div:nth-child(2n) {
-  margin-left: 1%;
-  margin-right: 4%;
-}
 
-#courses .row > div > span {
+#courses .row > div > div span {
   font-family: poppins;
-  color: var(--timeline-courses);
+  color: var(--border-color);
 }
 
-
-#music-courses {
-  padding-top: 30px;
-}
-
-#music-courses .row > div {
-  color: var(--base-white);
-  margin-bottom: 10px;
-  margin-left: 4%;
-  margin-right: 1%;
-  padding: 30px;
-  border: 2px solid var(--timeline-music-courses-lighted);
-  width: 45%;
-  max-width: 45%;
-  background-color:rgba(0, 0, 0, 0.6);
-}
-
-#music-courses .row > div:nth-child(2n) {
-  margin-left: 1%;
-  margin-right: 4%;
-}
-
-#music-courses .row > div > span {
-  font-family: poppins;
-  color: var(--timeline-music-courses-lighted);
-}
-
-#courses .row > div > span > h4, #music-courses .row > div > span > h4 {
+#courses .row > div span > h4 {
   font-size: 20px;
-}
-
-@media (max-width: 991.98px) {
-  #courses .row > div {
-    margin-left: 4vw;
-    margin-right: 4vw;
-    width: 93%;
-    max-width: 93%;
-  }
-
-  #courses .row > div:nth-child(2n) {
-    margin-left: 4vw;
-    margin-right: 4vw;
-  }
-
-  #music-courses .row > div {
-    margin-left: 4vw;
-    margin-right: 4vw;
-    width: 93%;
-    max-width: 93%;
-  }
-
-  #music-courses .row > div:nth-child(2n) {
-    margin-left: 4vw;
-    margin-right: 4vw;
-  }
 }
 
 
