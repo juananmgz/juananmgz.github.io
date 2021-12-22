@@ -495,10 +495,6 @@
   }
 }
 
-.skill-group {
-  border: 2px solid var(--border-color);
-}
-
 #skills-cloud {
   font-size: 18px;
   color: var(--base-white);
@@ -523,19 +519,6 @@
 #skills-cloud div {
   text-align: center;
 }
-
-@media (min-width: 577px) {
-
-  #skills-cloud div {
-    text-align: justify;
-    text-align-last: center;
-  }
-
-  #skills-cloud div.nojustify {
-    text-align: center;
-  }
-}
-
 
 #skills-cloud div > .skills-cloud-title {
   padding-top: 30px;
