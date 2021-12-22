@@ -8,3 +8,4 @@ function toggleText(button_id, text1, text2) {
     document.getElementById(button_id).classList.add('ready-to-show');
   }
 }
+
