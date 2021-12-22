@@ -16,7 +16,7 @@
   padding-left: 20px;
   padding-right: 20px;
   font-weight: 400;
-  color: #eeeeee;
+  color: var(--base-white);
   position: relative;
   opacity: 1 !important;
   font-weight: 500;
@@ -24,17 +24,17 @@
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
   transition: all 300ms;
-  color: var(--my-orange);
+  color: var(--base-orange);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:active {
   transition: all 300ms;
-  color: var(--my-orange);
+  color: var(--base-orange);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
   border: none;
-  background: #000;
+  background: var(--base-black);
   -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
@@ -43,22 +43,22 @@
 }
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
   font-size: 12px;
-  color: #fff;
+  color: var(--base-white);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
-  background: var(--my-orange);
-  color: #000;
+  background: var(--base-orange);
+  color: var(--base-black);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
-  color: #000;
-  background: var(--my-orange);
+  color: var(--base-black);
+  background: var(--base-orange);
   border-radius: 0px;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: var(--my-orange);
+    color: var(--base-orange);
 }
 
 .ftco-navbar-light .navbar-toggler {
@@ -96,17 +96,17 @@
     padding-bottom: .5rem;
   }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: var(--my-orange);
+    color: var(--base-orange);
   }
 
   .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
-    color: #000;
-    background: var(--my-orange);
+    color: var(--base-black);
+    background: var(--base-orange);
     border-radius: 4px;
   }
 
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: var(--my-orange);
+    color: var(--base-orange);
   }
 }
 
@@ -130,7 +130,7 @@
 }
 
 .bg-none {
-  background: #000;
+  background: var(--base-black);
 }
 
 

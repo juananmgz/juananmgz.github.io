@@ -1,15 +1,33 @@
 html {
   scroll-behavior: smooth;
 
-  --my-orange: #ffac40;
-  --timeline-educ: #db4747;
-  --timeline-exper: #ffa837;
-  --timeline-courses: #8abdff;
-  --timeline-music-courses:rgb(93, 167, 97);
-  --timeline-educ-lighted: #ff7d7d;
-  --timeline-exper-lighted: #ffbe6a;
-  --timeline-courses-lighted: #acd0ff;
-  --timeline-music-courses-lighted:rgb(129, 212, 133);
+  /* Variables globales - COLORES */
+
+  --base-orange: #ffac40;
+  --base-white: #ffffff;
+  --base-black: #000000;
+
+
+  --secc-red: #db4747;
+  --secc-red-lighted: #ff7d7d;
+  --secc-orange: #ffa837;
+  --secc-orange-lighted: #ffbe6a;
+  --secc-blue: #8abdff;
+  --secc-blue-lighted: #acd0ff;
+  --secc-green:#5da761;
+  --secc-green-lighted:#81d485;
+  --secc-purple: #9153b6;
+  --secc-purple-lighted: #b48eca;
+
+
+  --timeline-educ: var(--secc-red);
+  --timeline-educ-lighted: var(--secc-red-lighted);
+  --timeline-exper: var(--secc-orange);
+  --timeline-exper-lighted: var(--secc-orange-lighted);
+  --timeline-courses: var(--secc-blue);
+  --timeline-courses-lighted: var(--secc-blue-lighted);
+  --timeline-music-courses:var(--secc-green);
+  --timeline-music-courses-lighted:var(--secc-green-lighted);
 }
 
 body {
@@ -55,7 +73,18 @@ body {
   padding-bottom:200px;
 }
 
-
+.mt-100{
+  margin-top:100px;
+}
+.mt-200{
+  margin-top:200px;
+}
+.mb-100{
+  margin-bottom:100px;
+}
+.mb-200{
+  margin-bottom:200px;
+}
 .ml-100{
   margin-left:100px;
 }
