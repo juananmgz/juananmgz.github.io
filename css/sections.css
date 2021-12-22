@@ -536,6 +536,11 @@
   }
 }
 
+
+#skills-cloud div > .skills-cloud-title {
+  padding-top: 30px;
+}
+
 #languages-md {
   display: none;
 }
@@ -545,6 +550,10 @@
 }
 
 @media (max-width: 1200px) {
+  #skills-cloud div > .skills-cloud-title {
+    padding-top: 0px;
+  }
+
   #languages-md {
     display: block;
   }
@@ -552,6 +561,36 @@
   #languages-lg {
     display: none;
   }
+}
+
+
+#skills .btn {
+  color: var(--base-white);
+  background: linear-gradient(135deg, #852d91, #312a6c);
+  padding: 10px 20px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+#skills .btn:hover {
+  color: var(--base-white);
+  border: none;
+  border: solid 2px var(--base-white);
+  animation: rotate 0.7s ease-in-out both;
+}
+
+@keyframes rotate {
+  0%{ transform: rotate(0deg); }
+  25%{ transform: rotate(3deg); }
+  50%{ transform: rotate(-3deg); }
+  75%{ transform: rotate(1deg); }
+  100%{ transform: rotate(0deg); }
+}
+
+@media only screen and (max-width: 767px) {
+  #skills .btn{ margin-bottom: 20px; }
 }
 
 
