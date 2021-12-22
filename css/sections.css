@@ -536,6 +536,24 @@
   }
 }
 
+#languages-md {
+  display: none;
+}
+
+#languages-lg {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  #languages-md {
+    display: block;
+  }
+
+  #languages-lg {
+    display: none;
+  }
+}
+
 
 /* PORTFOLIO */
 
