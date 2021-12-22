@@ -433,13 +433,13 @@
   }
 }
 
-#skills-cloud {
+.skills-cloud {
   font-size: 18px;
   color: var(--base-white);
   line-height: 50px;
 }
 
-#skills-cloud div span{
+.skills-cloud div span{
   margin: 3px;
   border: 2px solid var(--border-color);
   padding: 6px 15px;
@@ -447,18 +447,18 @@
   white-space: nowrap;
 }
 
-#skills-cloud div span.none-style{
+.skills-cloud div span.none-style{
   margin: 0px;
   padding: 0px;
   border: 0px;
   font-weight: 400;
 }
 
-#skills-cloud div {
+.skills-cloud div {
   text-align: center;
 }
 
-#skills-cloud div > .skills-cloud-title {
+.skills-cloud div > .skills-cloud-title {
   padding-top: 30px;
 }
 
@@ -471,7 +471,7 @@
 }
 
 @media (max-width: 1200px) {
-  #skills-cloud div > .skills-cloud-title {
+  .skills-cloud div > .skills-cloud-title {
     padding-top: 0px;
   }
 
@@ -492,7 +492,9 @@
   border: none;
   overflow: hidden;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  border: 2px solid var(--base-black);
+  transition: all 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+
 }
 
 #skills .btn.ready-to-show {
