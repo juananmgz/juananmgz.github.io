@@ -356,7 +356,7 @@
 
 #courses .row > div > div span {
   font-family: poppins;
-  color: var(--border-color);
+  color: var(--title-color);
 }
 
 #courses .row > div span > h4 {
@@ -504,7 +504,7 @@
 #skills .btn:hover {
   color: var(--base-white);
   border: solid 2px var(--base-white);
-  animation: rotate 0.7s ease-in-out both;
+  animation: rotate-other-skills 0.7s ease-in-out both;
 }
 
 @keyframes rotate-iddle {
@@ -515,7 +515,7 @@
   100%{ transform: rotate(0deg); }
 }
 
-@keyframes rotate {
+@keyframes rotate-other-skills {
   0%{ transform: rotate(0deg); }
   25%{ transform: rotate(3deg); }
   50%{ transform: rotate(-3deg); }
