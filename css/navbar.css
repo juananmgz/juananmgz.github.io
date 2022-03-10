@@ -24,7 +24,7 @@
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
   transition: all 300ms;
-  color: var(--base-orange);
+  color: var(--base-orange-lighted);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:active {
