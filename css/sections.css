@@ -532,15 +532,8 @@
 
 .portfolio-card {
   content: "";
-  height: 100%;
   border: 2px solid var(--base-white);
   margin-bottom: 10px;
-}
-
-.portfolio-card {
-  max-width: 94%;
-  margin-left: 3%;
-  margin-right: 3%;
 }
 
 .portfolio-card img {
