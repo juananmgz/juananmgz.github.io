@@ -1,0 +1,65 @@
+@mixin hero-gradient() {
+  background: -webkit-linear-gradient(180deg, #ecc283, #c79b59, #ecc283);
+}
+
+#hero-container {
+  padding-right: 0px;
+  margin-right: 0px;
+
+  #text-column {
+    height: 100vh;
+    margin-top: 5vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    #hero-title {
+      height: fit-content;
+
+      .hero-my-name {
+        color: white;
+        -webkit-text-stroke-width: 0;
+        font-size: 2vw;
+      }
+
+      .hero-frontend {
+        @include hero-gradient();
+        font-family: "Krona One", sans-serif;
+        -webkit-text-stroke-width: 0;
+        font-size: 7vw;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-developer {
+        font-family: "Krona One", sans-serif;
+        font-size: 5.5vw;
+        color: transparent;
+      }
+    }
+
+    #hero-buttons {
+      margin-top: 15vh;
+
+      button {
+        margin: 0 1vw;
+      }
+    }
+  }
+
+  #picture-column {
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    img {
+      height: 90vh;
+    }
+  }
+}
+
+#hero-title-shadow {
+  margin-top: -85vh;
+  margin-bottom: 17.5vh;
+}

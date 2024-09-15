@@ -1,0 +1,48 @@
+#background-title {
+  padding-top: 12.5vw;
+}
+
+#background-data {
+  height: calc(80vh - 12.5vw - 120px);
+
+  #background-list {
+    & > div {
+      margin: 35px 0;
+      justify-content: end;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    & > div:nth-last-child(2) {
+      margin-top: 80px;
+    }
+
+    .selected-mark {
+      width: 70px;
+
+      rect {
+        stroke: $text;
+        stroke-width: 3px;
+        fill: transparent;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  #background-text {
+    height: 90%;
+  }
+}
+
+#background-title-shadow {
+  margin-top: -90vh;
+  margin-bottom: 56vh;
+}
+
+#background-title-shadow {
+  .title-shadow {
+    transform: translateX(-40%);
+  }
+}

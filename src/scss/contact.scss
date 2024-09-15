@@ -1,0 +1,35 @@
+#contact-title {
+  padding-top: 12.5vw;
+  text-align: center;
+}
+
+#contact-form {
+  .form-field {
+    display: grid;
+    margin-top: 4vh;
+
+    label {
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0);
+      border: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  #contact-submit-button {
+    margin-top: 4vh;
+    width: fit-content;
+  }
+}
+
+#contact-title-shadow {
+  margin-top: -90vh;
+  margin-bottom: 22.5vh;
+}

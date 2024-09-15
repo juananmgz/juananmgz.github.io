@@ -1,0 +1,51 @@
+.box-header {
+  p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .box-header-headline,
+  .box-header-subheadline {
+    font-family: "Krona One", sans-serif;
+  }
+
+  .box-header-headline {
+    color: $highlight;
+  }
+
+  .box-subheader {
+    display: flex;
+    justify-content: space-between;
+
+    .box-header-subcomment {
+      font-style: italic;
+    }
+  }
+
+  border-bottom: 1px solid $highlight;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.box-round-image {
+  margin-left: -94px;
+  margin-top: 40px;
+  margin-bottom: -140px;
+  display: flex;
+
+  figure {
+    border-radius: 50px;
+    background: $bg;
+    border: 1px solid $highlight;
+  }
+
+  img {
+    margin: 4px;
+  }
+}
+
+.box-content {
+  .margened {
+    margin-left: 20px;
+  }
+}
