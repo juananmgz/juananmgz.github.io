@@ -1,3 +1,5 @@
+@import "@/scss/variables";
+
 @mixin hero-gradient() {
   background: -webkit-linear-gradient(180deg, #ecc283, #c79b59, #ecc283);
 }
@@ -8,33 +10,59 @@
 
   #text-column {
     height: 100vh;
-    margin-top: 5vh;
+    margin-top: -20vh;
     display: flex;
     text-align: center;
-    align-items: center;
+    align-items: end;
+
+    // Size: < Medium
+    @media (max-width: $sm) {
+      margin-top: -10vh;
+    }
+
+    // Size: < X-Small
+    @media (max-width: $xs) {
+      height: 40vh;
+      margin-top: 0;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
 
     #hero-title {
       height: fit-content;
 
+      // Size: < X-Small
+      @media (max-width: $xs) {
+        position: absolute;
+        bottom: 10vh;
+      }
+
       .hero-my-name {
-        color: white;
+        color: $text;
         -webkit-text-stroke-width: 0;
-        font-size: 2vw;
+        font-size: clamp(12px, 2vw, 42px);
       }
 
       .hero-frontend {
         @include hero-gradient();
         font-family: "Krona One", sans-serif;
         -webkit-text-stroke-width: 0;
-        font-size: 7vw;
+        font-size: clamp(42px, 7vw, 144px);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
       .hero-developer {
         font-family: "Krona One", sans-serif;
-        font-size: 5.5vw;
+        font-size: clamp(36px, 5.5vw, 113px);
         color: transparent;
+      }
+
+      .hero-frontend,
+      .hero-developer {
+        width: 100%;
+        display: block;
       }
     }
 
@@ -52,14 +80,32 @@
     display: flex;
     justify-content: end;
     align-items: end;
+    z-index: -1;
+    position: relative;
 
     img {
       height: 90vh;
+    }
+
+    // Size: < X-Small
+    @media (max-width: $xs) {
+      position: absolute;
+      img {
+        height: auto;
+        width: 100%;
+        left: 0;
+        transform: none;
+      }
     }
   }
 }
 
 #hero-title-shadow {
-  margin-top: -85vh;
-  margin-bottom: 17.5vh;
+  margin-top: -95vh;
+  font-size: 2.75vw;
+
+  // Size: < X-Small
+  @media (max-width: $xs) {
+    margin-top: -20vh;
+  }
 }

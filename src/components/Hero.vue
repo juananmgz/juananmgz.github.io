@@ -1,7 +1,7 @@
 <template>
   <div id="hero-container" class="container-fluid section">
     <div class="row">
-      <div id="text-column" class="col-6 offset-1">
+      <div id="text-column" class="col-lg-6 col-sm-7 offset-sm-1 col-xs-12">
         <div id="hero-title">
           <h1 class="hero-my-name">JUAN ANTONIO MUÑOZ GÓMEZ</h1>
           <h2><span class="hero-frontend">FRONTEND</span> <span class="hero-developer">DEVELOPER</span></h2>
@@ -11,14 +11,13 @@
           </div>
         </div>
       </div>
-      <div id="picture-column" class="col-5">
+      <div id="picture-column" class="col-lg-5 col-sm-4 col-xs-12">
         <img :src="image" />
       </div>
     </div>
-  </div>
-
-  <div id="hero-title-shadow" class="title-shadow">
-    <h1>FRONTEND<br />DEVELOPER</h1>
+    <div id="hero-title-shadow" class="title-shadow">
+      <h1>FRONTEND<br />DEVELOPER</h1>
+    </div>
   </div>
 </template>
 
