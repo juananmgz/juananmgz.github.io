@@ -101,7 +101,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   height: 100vh;
-  background: linear-gradient(114deg, rgba(18, 18, 19, 0.4) 3.04%, rgba(33, 40, 44, 0.3) 21.89%, rgba(6, 2, 2, 0.4) 80.02%), linear-gradient(63deg, #15181b 48.35%, #161b1f 57.48%, #12181f 64.42%);
+  background: linear-gradient(114deg, rgba(18, 18, 19, 0.4) 3.04%, rgba(38, 45, 49, 0.3) 21.89%, rgba(6, 2, 2, 0.4) 80.02%), linear-gradient(63deg, #15181b 48.35%, #13181b 57.48%, #12181f 64.42%);
   background-attachment: fixed; /* Keeps the background fixed in place */
   background-size: cover; /* Ensures the gradient covers the element */
   background-position: center; /* Centers the gradient */
@@ -169,7 +169,7 @@ canvas {
   white-space: nowrap;
   overflow: hidden;
 
-  opacity: 0.05;
+  opacity: 0.15;
   font-size: 3vw;
 
   z-index: -5;
@@ -181,6 +181,12 @@ canvas {
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+  h1 {
+    -webkit-text-stroke-width: 0;
+    color: $bg;
+    text-shadow: $highlight 0px 0 5px;
+  }
 }
 
 /* ----------------------------------------
