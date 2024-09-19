@@ -50,7 +50,6 @@ export default {
     },
     scrollToSection() {
       const element = document.getElementById("contact-container");
-      console.log(element);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
         this.$emit("update-current", 4);

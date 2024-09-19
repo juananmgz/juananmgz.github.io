@@ -10,19 +10,19 @@
     <div id="contact-form">
       <form @submit.prevent="handleSubmit" class="container">
         <div class="row">
-          <div class="form-field offset-1 col-4">
+          <div class="form-field col-12 col-lg-5 offset-lg-1">
             <label class="highlight" for="name">{{ name.title }}</label>
             <input type="text" id="name" v-model="form.name" :placeholder="name.placeholder" />
           </div>
 
-          <div class="form-field offset-2 col-4">
+          <div class="form-field col-12 col-lg-5">
             <label class="highlight" for="email">{{ email.title }}</label>
             <input type="email" id="email" v-model="form.email" :placeholder="email.placeholder" />
           </div>
         </div>
 
         <div class="row">
-          <div class="form-field offset-1 col-10">
+          <div class="form-field col-12 col-lg-10 offset-lg-1">
             <label class="highlight" for="description">{{ message.title }}</label>
             <textarea id="description" v-model="form.description" :placeholder="message.placeholder"></textarea>
           </div>
@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <div id="contact-title-shadow" class="title-shadow">
+  <div id="contact-title-shadow" class="d-none d-xl-block title-shadow">
     <h1 v-html="this.title"></h1>
   </div>
 </template>

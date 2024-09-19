@@ -2,9 +2,9 @@
   <ScrollBar :number="numberOfSections" :current="currentSectionIndex" @update-current="updateCurrent" />
   <Hero @update-current="updateCurrent" />
   <AboutMe />
-  <Background />
-  <!-- <Feedback />
-  <Contact /> -->
+  <!-- <Background /> -->
+  <!-- <Feedback /> -->
+  <Contact />
 </template>
 
 <script>
@@ -39,7 +39,6 @@ export default {
   },
   watch: {
     currentSectionIndex(newValue) {
-      console.log(newValue);
       if (newValue < 0) {
         this.currentSectionIndex = this.numberOfSections - 1;
       }
