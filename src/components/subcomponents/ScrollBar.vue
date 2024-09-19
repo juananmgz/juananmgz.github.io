@@ -1,15 +1,9 @@
 <template>
-  <div :class="['scroll-bar', { middle: current != 0 }]">
+  <div :class="['scroll-bar d-none d-sm-block', { middle: current != 0 }]">
     <!-- Loop through the number of sections -->
     <div v-for="index in number" :key="index" class="diamond-wrapper" @click="scrollToSection(index - 1)">
       <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" :class="['diamond', { 'diamond--selected': isSelected(index - 1) }]" viewBox="0 0 39 39">
-        <rect
-          :width="isSelected(index - 1) ? '20' : '10'"
-          :height="isSelected(index - 1) ? '20' : '10'"
-          :x="isSelected(index - 1) ? '7' : '10'"
-          :y="isSelected(index - 1) ? '7' : '10'"
-          :class="['diamond-rect', { 'diamond-rect--selected': isSelected(index - 1) }]"
-        />
+        <rect width="10" height="10" x="10" y="10" :class="['diamond-rect', { 'diamond-rect--selected': isSelected(index - 1) }]" />
       </svg>
     </div>
   </div>

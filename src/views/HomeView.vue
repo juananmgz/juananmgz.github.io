@@ -3,7 +3,7 @@
   <Hero @update-current="updateCurrent" />
   <AboutMe />
   <!-- <Background /> -->
-  <!-- <Feedback /> -->
+  <Feedback />
   <Contact />
 </template>
 

@@ -9,36 +9,47 @@
   transition: bottom 0.75s ease-in-out;
 
   &.middle {
-    bottom: 40vh;
+    // Size: >= Medium
+    @media (min-width: $md) {
+      bottom: 40vh;
+    }
   }
-}
 
-.diamond-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .diamond-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.diamond {
-  transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
-  cursor: pointer;
-  transform: translateX(19px) translateY(-19px);
-}
+  .diamond {
+    transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+    cursor: pointer;
+    transform: translateX(19px) translateY(-19px);
 
-.diamond:hover {
-  transform: scale(1.5) translateX(13px) translateY(-13px);
-}
+    &:hover {
+      transform: scale(1.2) translateX(15.5px) translateY(-15.5px);
+    }
 
-.diamond-rect {
-  fill: $highlight;
-  stroke: none;
-  transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
-  transform: rotate(45deg) translateX(12px) translateY(-12px);
-}
+    .diamond-rect {
+      fill: $highlight;
+      stroke: none;
+      transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+      transform: rotate(45deg) translateX(12px) translateY(-12px);
+    }
+  }
 
-.diamond--selected .diamond-rect {
-  fill: none;
-  stroke: $highlight;
-  stroke-width: 2px;
-  transform: rotate(0deg) translateY(5px);
+  .diamond--selected {
+    transform: scale(2) translateX(12.5px) translateY(-9px);
+
+    &:hover {
+      transform: scale(2) translateX(12.5px) translateY(-9px);
+    }
+
+    .diamond-rect {
+      fill: none;
+      stroke: $highlight;
+      stroke-width: 2px;
+      transform: rotate(0deg) translateY(5px);
+    }
+  }
 }
