@@ -74,7 +74,7 @@ body {
 
   p {
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: clamp(12px, 2vw, 22px) !important;
 
     .highlight {
       font-size: 0.85em;

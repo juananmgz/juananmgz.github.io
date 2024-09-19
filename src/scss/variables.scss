@@ -17,9 +17,9 @@ $transparent: rgba(255, 255, 255, 0);
     SIZES 
  ---------------------------------------- */
 
-$xxl: 2560px;
-$xl: 1920px;
-$lg: 1280px;
-$md: 992px;
-$sm: 767px;
-$xs: 576px;
+$xxl: 1400px; // Bootstrap's XXL breakpoint
+$xl: 1200px; // Bootstrap's XL breakpoint
+$lg: 992px; // Bootstrap's LG breakpoint
+$md: 768px; // Bootstrap's MD breakpoint
+$sm: 576px; // Bootstrap's SM breakpoint
+$xs: 0px; // Bootstrap's XS breakpoint

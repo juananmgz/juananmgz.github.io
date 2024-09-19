@@ -1,13 +1,13 @@
 <template>
-  <div id="background-container" class="container-fluid section">
-    <div id="background-title" class="row">
+  <div id="career-container" class="container-fluid section">
+    <div id="career-title" class="row">
       <div class="col-10 offset-1">
         <h2 class="title" v-html="this.title"></h2>
         <p v-html="this.paragraph"></p>
       </div>
     </div>
-    <div id="background-data" class="row d-flex align-items-center">
-      <div id="background-list" class="col-3 offset-1 text-end">
+    <div id="career-data" class="row d-flex align-items-center">
+      <div id="career-list" class="col-3 offset-1 text-end">
         <div v-for="item in listElements" :key="item" @mouseover="select(item)" class="d-flex justify-end align-items-center">
           <p :class="[isSelected(item) ? 'selected' : '', 'text-uppercase highlight']">{{ item }}</p>
           <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
@@ -15,13 +15,13 @@
           </svg>
         </div>
       </div>
-      <div id="background-text" class="col-5 offset-1">
+      <div id="career-text" class="col-5 offset-1">
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>
   </div>
 
-  <div id="background-title-shadow" class="title-shadow">
+  <div id="career-title-shadow" class="title-shadow">
     <h1 v-html="this.title"></h1>
   </div>
 </template>
@@ -31,29 +31,29 @@
 import Box from "@/components/subcomponents/Box.vue";
 
 /* Messages */
-import background from "@/assets/messages/background.js";
+import career from "@/assets/messages/career.js";
 
 export default {
-  name: "Background",
+  name: "career",
   components: {
     Box,
   },
   data: function () {
     return {
-      title: background.en.title,
-      paragraph: background.en.paragraph,
-      background: this.backgroundFormat(),
-      awards: background.en.awards,
+      title: career.en.title,
+      paragraph: career.en.paragraph,
+      career: this.careerFormat(),
+      awards: career.en.awards,
       selected: { title: "" },
     };
   },
   mounted() {
-    this.selected = this.background[0];
+    this.selected = this.career[0];
   },
   computed: {
     /* Formats selectable elements of list */
     listElements() {
-      return this.background ? this.background.map((el) => el.title) : [];
+      return this.career ? this.career.map((el) => el.title) : [];
     },
     header() {
       return {
@@ -65,26 +65,26 @@ export default {
     },
   },
   methods: {
-    /* Formats background (experience + education + awards) */
-    backgroundFormat() {
+    /* Formats career (experience + education + awards) */
+    careerFormat() {
       // Experience
-      let formatted = [...background.en.experience];
+      let formatted = [...career.en.experience];
 
       // Education
-      var educationDesc = background.en.education.desc;
+      var educationDesc = career.en.education.desc;
 
-      if (background.en.education.courses.length > 0) {
+      if (career.en.education.courses.length > 0) {
         educationDesc += "<ul>";
-        for (var course of background.en.education.courses) {
+        for (var course of career.en.education.courses) {
           educationDesc += "<li>" + course.title + "." + "<span class='font-italic'>" + course.entity + "</span> (" + course.year + ") </li>";
         }
         educationDesc += "</ul>";
       }
 
       let education = {
-        title: background.en.education.title,
-        imgURL: background.en.education.imgURL,
-        position: background.en.education.position,
+        title: career.en.education.title,
+        imgURL: career.en.education.imgURL,
+        position: career.en.education.position,
         duration: "",
         desc: educationDesc,
       };
@@ -92,30 +92,30 @@ export default {
       formatted.push(education);
 
       // Awards
-      var awardDesc = background.en.awards.awardsEngineering.desc;
+      var awardDesc = career.en.awards.awardsEngineering.desc;
 
-      if (background.en.awards.awardsMusic.awards.length > 0) {
+      if (career.en.awards.awardsMusic.awards.length > 0) {
         educationDesc += "<ul>";
-        for (var award of background.en.awards.awardsEngineering.awards) {
+        for (var award of career.en.awards.awardsEngineering.awards) {
           awardDesc += "<li><span class='highlight font-default'>" + award.title + "</span>. " + "<span class='font-italic'>" + award.organization + "</span> </li>";
         }
         educationDesc += "</ul>";
       }
 
-      awardDesc += "<br/>" + background.en.awards.awardsMusic.desc;
+      awardDesc += "<br/>" + career.en.awards.awardsMusic.desc;
 
-      if (background.en.awards.awardsMusic.awards.length > 0) {
+      if (career.en.awards.awardsMusic.awards.length > 0) {
         educationDesc += "<ul>";
-        for (var award of background.en.awards.awardsMusic.awards) {
+        for (var award of career.en.awards.awardsMusic.awards) {
           awardDesc += "<li>" + award.title + "." + award.organization + "</li>";
         }
         educationDesc += "</ul>";
       }
 
       let awards = {
-        title: background.en.awards.title,
-        imgURL: background.en.awards.imgURL,
-        position: background.en.awards.position,
+        title: career.en.awards.title,
+        imgURL: career.en.awards.imgURL,
+        position: career.en.awards.position,
         duration: "",
         desc: awardDesc,
       };
@@ -128,7 +128,7 @@ export default {
       return this.selected.title == item;
     },
     select(item) {
-      this.selected = this.background.filter((el) => el.title == item)[0];
+      this.selected = this.career.filter((el) => el.title == item)[0];
     },
   },
 };
@@ -136,5 +136,5 @@ export default {
 
 <style scoped lang="scss">
 @import "@/scss/main";
-@import "@/scss/background";
+@import "@/scss/career";
 </style>

@@ -1,4 +1,4 @@
-const background = {
+const career = {
   en: {
     title: `Over the years,`,
     paragraph: `I’ve tackled all sorts of projects, from complex enterprise apps to snazzy marketing websites.<br/>Here's a snapshot of my career road trip so far:`,
@@ -91,4 +91,4 @@ const background = {
   },
 };
 
-export default background;
+export default career;

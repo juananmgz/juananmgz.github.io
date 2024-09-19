@@ -9,43 +9,44 @@
   margin: 0px;
 
   #text-column {
-    height: 100vh;
-    margin-top: -20vh;
+    height: 40vh;
+    margin-top: 0;
     display: flex;
     text-align: center;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
 
-    // Size: < Large
-    @media (max-width: $lg) {
-      margin-top: -10vh;
+    // Size: >= Medium
+    @media (min-width: $md) {
+      height: 100vh;
+      margin-top: -20vh;
+      flex-direction: row;
+      align-items: end;
     }
 
-    // Size: < Small
-    @media (max-width: $sm) {
-      height: 40vh;
-      margin-top: 0;
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
+    // Size: >= Large
+    @media (min-width: $md) {
+      margin-top: -10vh;
     }
 
     #hero-title {
       height: fit-content;
+      position: absolute;
+      bottom: 10vh;
 
-      // Size: < Small
-      @media (max-width: $sm) {
-        position: absolute;
-        bottom: 10vh;
+      // Size: >= Medium
+      @media (min-width: $md) {
+        position: static;
       }
 
       .hero-my-name {
         color: $text;
         -webkit-text-stroke-width: 0;
-        font-size: clamp(20px, 2vw, 42px);
+        font-size: clamp(10px, 6vw, 20px);
 
-        // Size: < Small
-        @media (max-width: $sm) {
-          font-size: clamp(10px, 6vw, 20px);
+        // Size: >= Medium
+        @media (min-width: $md) {
+          font-size: clamp(20px, 2vw, 42px);
         }
       }
 
@@ -55,23 +56,22 @@
         -webkit-text-stroke-width: 0;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-size: clamp(42px, 10vw, 80px);
 
-        font-size: clamp(80px, 7vw, 144px);
-
-        // Size: < Small
-        @media (max-width: $sm) {
-          font-size: clamp(42px, 10vw, 80px);
+        // Size: >= Medium
+        @media (min-width: $md) {
+          font-size: clamp(80px, 7vw, 144px);
         }
       }
 
       .hero-developer {
         font-family: "Krona One", sans-serif;
-        font-size: clamp(56px, 5.5vw, 113px);
+        font-size: clamp(32px, 10vw, 56px);
         color: transparent;
 
-        // Size: < Small
-        @media (max-width: $sm) {
-          font-size: clamp(32px, 10vw, 56px);
+        // Size: >= Medium
+        @media (min-width: $md) {
+          font-size: clamp(56px, 5.5vw, 113px);
         }
       }
 
@@ -83,11 +83,11 @@
     }
 
     #hero-buttons {
-      margin-top: 15vh;
+      margin-top: 5vh;
 
-      // Size: < X-Small
-      @media (max-width: $lg) {
-        margin-top: 5vh;
+      // Size: >= Large
+      @media (min-width: $lg) {
+        margin-top: 15vh;
       }
 
       button {
@@ -97,43 +97,51 @@
   }
 
   #picture-column {
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: end;
     align-items: end;
     z-index: -1;
-    position: relative;
+    position: absolute;
     padding: 0;
+    height: 100vh;
 
-    // Size: < Small
-    @media (max-width: $sm) {
-      position: absolute;
+    // Size: >= Medium
+    @media (min-width: $md) {
+      height: 100vh;
+      position: relative;
     }
 
     img {
-      height: 90vh;
+      height: auto;
+      width: 100%;
+      left: 0;
+      transform: none;
 
-      // Size: < Small
-      @media (max-width: $sm) {
-        height: auto;
-        width: 100%;
-        left: 0;
-        transform: none;
+      // Size: >= Medium
+      @media (min-width: $md) {
+        height: 90vh;
+        width: auto;
       }
     }
   }
 }
 
 #hero-title-shadow {
-  margin-top: -95vh;
+  margin-top: -30vh;
   font-size: 2.75vw;
 
-  // Size: < Small
-  @media (max-width: $sm) {
-    margin-top: -30vh;
+  // Size: >= Medium
+  @media (min-width: $md) {
+    margin-top: -95vh;
   }
 
   h1 {
-    margin-left: -7vw;
+    margin-left: 0;
+
+    // Size: >= Medium
+    @media (min-width: $md) {
+      margin-left: -7vw;
+    }
   }
 }
