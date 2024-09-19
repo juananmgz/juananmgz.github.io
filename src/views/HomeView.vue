@@ -1,10 +1,10 @@
 <template class="home">
   <ScrollBar :number="numberOfSections" :current="currentSectionIndex" @update-current="updateCurrent" />
   <Hero @update-current="updateCurrent" />
-  <AboutMe />
+  <!-- <AboutMe />
   <Background />
   <Feedback />
-  <Contact />
+  <Contact /> -->
 </template>
 
 <script>
