@@ -35,6 +35,7 @@
           }"
           :text="item.desc"
           corners="top-right"
+          :isAlwaysOpened="true"
         ></Box>
       </div>
     </div>

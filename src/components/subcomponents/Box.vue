@@ -1,8 +1,11 @@
 <template>
   <div :class="cornersClass">
     <div class="desc box-highlight-wrap">
-      <div class="box-header" v-if="header">
-        <p class="box-header-headline">{{ this.header.headline }}</p>
+      <div :class="['box-header ', isAlwaysOpened ? 'opened' : '']" v-if="header">
+        <div class="box-headline">
+          <p class="box-header-headline">{{ this.header.headline }}</p>
+          <p class="box-see-details" v-if="!isAlwaysOpened">See details</p>
+        </div>
 
         <div class="box-subheader">
           <p class="box-header-subheadline">{{ this.header.subheadline }}</p>
@@ -28,6 +31,7 @@ export default {
     text: String,
     header: Object,
     corners: String,
+    isAlwaysOpened: Boolean,
   },
   computed: {
     textFormat() {

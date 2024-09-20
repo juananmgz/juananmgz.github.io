@@ -17,7 +17,7 @@
   }
 
   #career-data {
-    height: calc(80vh - 120px);
+    height: calc(100vh - 120px);
 
     // Size: < X-Large
     @media (max-width: $xl) {
@@ -54,7 +54,7 @@
     }
 
     #career-text {
-      height: 90%;
+      height: 80%;
       margin-top: 10vw;
     }
 

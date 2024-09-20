@@ -22,7 +22,7 @@
         </div>
       </div>
       <div id="career-text" class="d-none d-xl-block col-xl-5 offset-xl-1">
-        <Box :header="this.headerSelected" :text="this.selected.desc" corners="top-right"></Box>
+        <Box :header="this.headerSelected" :text="this.selected.desc" corners="top-right" :isAlwaysOpened="true"></Box>
       </div>
       <div id="career-text-small" v-for="item in career" :key="item" class="d-xl-none d-block col-12">
         <Box
@@ -34,6 +34,7 @@
           }"
           :text="item.desc"
           corners="top-right"
+          :isAlwaysOpened="true"
         ></Box>
       </div>
     </div>
@@ -125,7 +126,7 @@ export default {
       if (career.en.awards.awardsMusic.awards.length > 0) {
         educationDesc += "<ul>";
         for (var award of career.en.awards.awardsMusic.awards) {
-          awardDesc += "<li>" + award.title + "." + award.organization + "</li>";
+          awardDesc += "<li>" + award.title + ". " + award.organization + "</li>";
         }
         educationDesc += "</ul>";
       }

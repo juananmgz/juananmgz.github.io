@@ -73,18 +73,18 @@ const career = {
         title: "Engineering awards",
         desc: `Furthermore, it was a pleasure to be recognised as <span class="highlight marker">musician</span> too. In 2019, my region crowned me thanks to my music dedication. Besides, I was on the podium on some national contests.`,
         awards: [
-          {
-            title: `Traditional Music Award “Young Talent”`,
-            organization: `Arlafolk (2019)`,
-          },
-          {
-            title: `National Traditional Music Contest`,
-            organization: `<ul><li>2nd ― Casares de Hurdes, Spain (2022)</li>
-            <li>1st ― La Huetre, Spain (2016)</li>
-            <li>2nd ― La Huetre, Spain (2015)</li>
-            <li>1st ― Casares de Hurdes, Spain (2014)</li>
-            <li>2nd ― Casares de Hurdes, Spain (2013)</li></ul>`,
-          },
+          // {
+          //   title: `Traditional Music Award “Young Talent”`,
+          //   organization: `Arlafolk (2019)`,
+          // },
+          // {
+          //   title: `National Traditional Music Contest`,
+          //   organization: `<ul><li>2nd ― Casares de Hurdes, Spain (2022)</li>
+          //   <li>1st ― La Huetre, Spain (2016)</li>
+          //   <li>2nd ― La Huetre, Spain (2015)</li>
+          //   <li>1st ― Casares de Hurdes, Spain (2014)</li>
+          //   <li>2nd ― Casares de Hurdes, Spain (2013)</li></ul>`,
+          // },
         ],
       },
     },
