@@ -73,7 +73,7 @@ export default {
     listElements() {
       return this.career ? this.career.map((el) => el.title) : [];
     },
-    header() {
+    headerSelected() {
       return {
         imgURL: this.selected.imgURL,
         headline: this.selected.title,
