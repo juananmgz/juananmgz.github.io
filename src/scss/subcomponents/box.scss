@@ -1,51 +1,90 @@
-.box-header {
-  p {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+.box-highlight-wrap {
+  .box-header {
+    overflow: hidden;
+    border-bottom: 1px solid $highlight;
+    margin-bottom: 20px;
 
-  .box-header-headline,
-  .box-header-subheadline {
-    font-family: "Krona One", sans-serif;
-  }
+    p {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-  .box-header-headline {
-    color: $highlight;
-  }
+    .box-header-headline {
+      color: $highlight;
+      font-family: "Krona One", sans-serif;
+    }
 
-  .box-subheader {
-    display: flex;
-    justify-content: space-between;
+    .box-subheader {
+      margin-top: 1em;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease;
 
-    .box-header-subcomment {
-      font-style: italic;
+      .box-header-subheadline {
+        font-family: "Krona One", sans-serif;
+      }
+
+      .box-header-subcomment {
+        font-style: italic;
+      }
     }
   }
 
-  border-bottom: 1px solid $highlight;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-}
+  .box-round-image {
+    margin-left: -94px;
+    margin-top: 40px;
+    margin-bottom: -110px;
+    display: flex;
 
-.box-round-image {
-  margin-left: -94px;
-  margin-top: 40px;
-  margin-bottom: -140px;
-  display: flex;
+    figure {
+      border-radius: 50px;
+      background: $bg;
+      border: 1px solid $highlight;
+    }
 
-  figure {
-    border-radius: 50px;
-    background: $bg;
-    border: 1px solid $highlight;
+    img {
+      margin: 4px;
+    }
+
+    // Size: < X-Large
+    @media (max-width: $md) {
+      margin-left: -70px;
+    }
   }
 
-  img {
-    margin: 4px;
-  }
-}
+  .box-content {
+    .margened {
+      margin-left: 20px;
 
-.box-content {
-  .margened {
-    margin-left: 20px;
+      // Size: < X-Large
+      @media (max-width: $md) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &:hover {
+    .box-header {
+      overflow-y: auto;
+      padding-bottom: 15px;
+
+      .box-subheader {
+        max-height: 200px;
+        transition: max-height 0.2s ease-in-out;
+      }
+    }
+  }
+
+  // Size: < X-Large
+  @media (max-width: $xl) {
+    .box-header {
+      overflow-y: auto;
+      padding-bottom: 15px;
+
+      .box-subheader {
+        max-height: 200px;
+        transition: max-height 0.2s ease-in-out;
+      }
+    }
   }
 }

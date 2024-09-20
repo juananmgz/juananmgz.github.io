@@ -4,6 +4,9 @@
   // Size: < X-Large
   @media (max-width: $xl) {
     height: fit-content;
+    width: 90vw;
+    margin-left: 5vw;
+    padding-top: 112px;
   }
 
   & > .row {
@@ -74,9 +77,11 @@
     }
 
     .title {
+      padding-top: 36px;
       // Size: >= X-Large
       @media (min-width: $xl) {
         padding-left: 50px;
+        padding-top: 0;
       }
     }
   }

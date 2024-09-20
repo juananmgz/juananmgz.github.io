@@ -18,6 +18,13 @@ $scrollbar-margin: 20px;
   padding: 48px !important;
   height: 100%;
 
+  // Size: < X-Large
+  @media (max-width: $md) {
+    padding-top: 24px !important;
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+
   .text-hightlight-wrap {
     height: 100%;
     overflow: auto;

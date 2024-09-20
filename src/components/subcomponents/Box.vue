@@ -8,11 +8,11 @@
           <p class="box-header-subheadline">{{ this.header.subheadline }}</p>
           <p class="box-header-subcomment">{{ this.header.subcomment }}</p>
         </div>
-        <div class="box-round-image">
-          <figure>
-            <img :src="header.imgURL" :alt="header.headline + ' picture'" class="rounded-circle" width="80" />
-          </figure>
-        </div>
+      </div>
+      <div class="box-round-image" v-if="header">
+        <figure>
+          <img v-if="header && header.imgURL" :src="header.imgURL" :alt="header.headline + ' picture'" class="rounded-circle" width="80" />
+        </figure>
       </div>
       <div class="box-content text-hightlight-wrap">
         <p :class="{ margened: header }" v-for="paragraph in textFormat" :key="paragraph" v-html="paragraph"></p>

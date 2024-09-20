@@ -1,7 +1,11 @@
 <template>
   <div id="feedback-container" class="container-fluid section">
     <div id="feedback-data" class="row d-flex align-items-center">
-      <div class="col-4 offset-1 text-end">
+      <div id="feedback-title" class="d-xl-none d-block">
+        <h2 class="title" v-html="this.title"></h2>
+        <p v-html="this.paragraph"></p>
+      </div>
+      <div class="col-4 offset-1 text-end d-none d-xl-block">
         <div id="feedback-title">
           <h2 class="title" v-html="this.title"></h2>
           <p v-html="this.paragraph"></p>
@@ -18,15 +22,27 @@
           </div>
         </div>
       </div>
-      <div id="feedback-text" class="col-4 offset-1">
-        <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
+      <div id="feedback-text" class="d-none d-xl-block col-xl-5 offset-xl-1">
+        <Box :header="this.headerSelected" :text="this.selected.desc" corners="top-right"></Box>
+      </div>
+      <div id="feedback-text-small" v-for="item in comments" :key="item" class="d-xl-none d-block col-12">
+        <Box
+          :header="{
+            imgURL: item.imgURL,
+            headline: item.author,
+            subheadline: item.company,
+            subcomment: item.position,
+          }"
+          :text="item.desc"
+          corners="top-right"
+        ></Box>
       </div>
     </div>
   </div>
 
-  <div id="feedback-title-shadow" class="title-shadow">
+  <!-- <div id="feedback-title-shadow" class="title-shadow">
     <h1 v-html="this.title"></h1>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -62,7 +78,7 @@ export default {
           }))
         : [];
     },
-    header() {
+    headerSelected() {
       return {
         imgURL: this.selected.imgURL,
         headline: this.selected.author,
