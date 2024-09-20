@@ -1,29 +1,47 @@
 <template>
   <div id="career-container" class="container-fluid section">
-    <div id="career-title" class="row">
-      <div class="col-10 offset-1">
+    <div id="career-data" class="row d-flex align-items-center">
+      <div id="career-title" class="d-xl-none d-block">
         <h2 class="title" v-html="this.title"></h2>
         <p v-html="this.paragraph"></p>
       </div>
-    </div>
-    <div id="career-data" class="row d-flex align-items-center">
-      <div id="career-list" class="col-3 offset-1 text-end">
-        <div v-for="item in listElements" :key="item" @mouseover="select(item)" class="d-flex justify-end align-items-center">
-          <p :class="[isSelected(item) ? 'selected' : '', 'text-uppercase highlight']">{{ item }}</p>
-          <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
-            <rect v-if="isSelected(item)" width="15" height="15" x="46.5" y="-32.75" />
-          </svg>
+      <div class="col-4 offset-1 text-end d-none d-xl-block">
+        <div id="career-title">
+          <h2 class="title" v-html="this.title"></h2>
+          <p v-html="this.paragraph"></p>
+        </div>
+        <div id="career-list">
+          <div v-for="item in listElements" :key="item" @mouseover="select(item)" class="d-flex justify-end align-items-center">
+            <p :class="[isSelected(item) ? 'selected' : '', 'text-uppercase highlight']">
+              {{ item }}
+            </p>
+            <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
+              <rect v-if="isSelected(item)" width="15" height="15" x="46.5" y="-32.75" />
+            </svg>
+          </div>
         </div>
       </div>
-      <div id="career-text" class="col-5 offset-1">
-        <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
+      <div id="career-text" class="d-none d-xl-block col-xl-5 offset-xl-1">
+        <Box :header="this.headerSelected" :text="this.selected.desc" corners="top-right"></Box>
+      </div>
+      <div id="career-text-small" v-for="item in career" :key="item" class="d-xl-none d-block col-12">
+        <Box
+          :header="{
+            imgURL: item.imgURL,
+            headline: item.title,
+            subheadline: item.position,
+            subcomment: item.duration,
+          }"
+          :text="item.desc"
+          corners="top-right"
+        ></Box>
       </div>
     </div>
   </div>
 
-  <div id="career-title-shadow" class="title-shadow">
+  <!-- <div id="career-title-shadow" class="title-shadow">
     <h1 v-html="this.title"></h1>
-  </div>
+  </div> -->
 </template>
 
 <script>

@@ -2,7 +2,7 @@
   <ScrollBar :number="numberOfSections" :current="currentSectionIndex" @update-current="updateCurrent" />
   <Hero @update-current="updateCurrent" />
   <AboutMe />
-  <!-- <Background /> -->
+  <Background />
   <Feedback />
   <Contact />
 </template>

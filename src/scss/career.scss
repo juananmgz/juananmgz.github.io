@@ -1,38 +1,68 @@
-#career-title {
-  padding-top: 12.5vw;
-}
+#career-container {
+  // Size: < X-Large
+  @media (max-width: $xl) {
+    height: fit-content;
+  }
 
-#career-data {
-  height: calc(80vh - 12.5vw - 120px);
+  #career-title {
+    padding-top: 9.5vw;
+    font-size: clamp(10px, 0.75vw, 32px);
 
-  #career-list {
-    & > div {
-      margin: 35px 0;
-      justify-content: end;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    & > div:nth-last-child(2) {
-      margin-top: 80px;
-    }
-
-    .selected-mark {
-      width: 70px;
-
-      rect {
-        stroke: $text;
-        stroke-width: 3px;
-        fill: transparent;
-        transform: rotate(45deg);
-      }
+    @media (max-width: $xl) {
+      width: 90vw;
+      margin-left: 5vw;
+      padding-top: 160px;
+      padding-bottom: 36px;
     }
   }
 
-  #career-text {
-    height: 90%;
+  #career-data {
+    height: calc(80vh - 120px);
+
+    // Size: < X-Large
+    @media (max-width: $xl) {
+      height: fit-content;
+    }
+
+    #career-list {
+      margin-top: 4vw;
+
+      .small {
+        font-style: italic;
+        font-size: 0.7em;
+      }
+
+      & > div {
+        margin: 35px 0;
+        justify-content: end;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .selected-mark {
+        width: 70px;
+
+        rect {
+          stroke: $text;
+          stroke-width: 3px;
+          fill: transparent;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    #career-text {
+      height: 90%;
+      margin-top: 10vw;
+    }
+
+    #career-text-small {
+      margin-top: 24px;
+      width: calc(90vw);
+      margin-left: calc(5vw);
+    }
   }
 }
 
