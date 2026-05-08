@@ -1,4 +1,5 @@
 .box-header {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -11,7 +12,6 @@
   .box-header-text {
     flex: 1;
     min-width: 0;
-    max-width: 70%;
   }
 
   .box-header-headline,
@@ -40,7 +40,10 @@
 }
 
 .box-round-image {
-  flex-shrink: 0;
+  position: absolute;
+  top: 100%;
+  left: -92px;
+  transform: translateY(-50%);
 
   figure {
     border-radius: 50%;

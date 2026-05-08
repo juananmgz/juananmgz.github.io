@@ -4,7 +4,9 @@
 
 #background-main {
   height: 90vh;
+  max-height: 90vh;
   align-items: stretch;
+  flex-wrap: nowrap;
 }
 
 #background-left {
@@ -20,6 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 40px;
 
     & > div {
       margin: 1vh 0;
@@ -49,6 +52,9 @@
 
 #background-text {
   display: flex;
+  margin-top: 10vh;
+  height: 65vh;
+  min-height: 0;
 }
 
 #background-title-shadow {

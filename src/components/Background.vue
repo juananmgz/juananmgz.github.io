@@ -1,7 +1,7 @@
 <template>
   <div id="background-container" class="container-fluid section">
     <div id="background-main" class="row">
-      <div id="background-left" class="col-3 offset-1">
+      <div id="background-left" class="col-4 offset-1">
         <div id="background-title">
           <h2 class="title" v-html="this.title"></h2>
           <p v-html="this.paragraph"></p>
@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div id="background-text" class="col-4">
+      <div id="background-text" class="col-4 offset-1">
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>

@@ -18,10 +18,18 @@ $scrollbar-margin: 20px;
   padding: 48px !important;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  .box-header {
+    flex-shrink: 0;
+  }
 
   .text-hightlight-wrap {
-    height: 100%;
-    overflow: auto;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     margin-right: -$scrollbar-margin;
     width: calc(100% + $scrollbar-margin);
   }
