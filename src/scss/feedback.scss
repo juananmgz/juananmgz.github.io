@@ -1,21 +1,97 @@
-#feedback-title {
-  padding-top: 9.5vw;
+$menu-translate-duration: 0.2s;
+$menu-anim-duration: 0.2s;
+
+#feedback-container {
+  padding: 5vh 0;
 }
 
-#feedback-data {
-  height: calc(80vh - 120px);
+#feedback-main {
+  height: 90vh;
+  max-height: 90vh;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+#feedback-left {
+  display: flex;
+  flex-direction: column;
+
+  #feedback-title {
+    flex-shrink: 0;
+  }
 
   #feedback-list {
-    margin-top: 4vw;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: start;
+    margin-right: 40px;
+    margin-top: 3em;
+    min-height: 0;
 
-    .small {
-      font-style: italic;
-      font-size: 0.7em;
+    .main-column,
+    .submenu-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2vh;
+      min-width: calc(16rem + 70px);
     }
 
-    & > div {
-      margin: 35px 0;
-      justify-content: end;
+    .main-column {
+      position: relative;
+      margin-right: 50px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -30px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: $highlight;
+      }
+
+      .main-cell {
+        position: relative;
+        cursor: pointer;
+        margin-right: 0;
+
+        .main-cell-inner {
+          transform: translateX(-25px);
+          transition: transform $menu-translate-duration cubic-bezier(0.2, 0, 0.4, 1);
+
+          p {
+            margin: 0;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -30px;
+          height: 2px;
+          width: 0;
+          background: $highlight;
+          transition: width $menu-anim-duration cubic-bezier(1, 0.4, 0, 0.2);
+        }
+
+        &.selected {
+          .main-cell-inner {
+            transform: translateX(0);
+          }
+
+          &::after {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .menu-row {
+      cursor: pointer;
 
       p {
         margin: 0;
@@ -24,6 +100,8 @@
 
     .selected-mark {
       width: 70px;
+      flex-shrink: 0;
+      overflow: visible;
 
       rect {
         stroke: $text;
@@ -33,11 +111,14 @@
       }
     }
   }
+}
 
-  #feedback-text {
-    height: 90%;
-    margin-top: 10vw;
-  }
+#feedback-text {
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  height: 65vh;
+  min-height: 0;
 }
 
 #feedback-title-shadow {

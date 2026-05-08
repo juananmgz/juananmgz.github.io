@@ -16,7 +16,7 @@
         </div>
         <div class="box-round-image">
           <figure>
-            <img :src="header.imgURL" :alt="header.headline + ' picture'" class="rounded-circle" width="80" height="80" loading="lazy" decoding="async" @error="onImgError" />
+            <img :src="imgSrc" :alt="(header.headline || '') + ' picture'" class="rounded-circle" width="80" height="80" loading="lazy" decoding="async" @error="onImgError" />
           </figure>
         </div>
       </div>
@@ -43,6 +43,9 @@ export default {
     },
   },
   computed: {
+    imgSrc() {
+      return this.header && this.header.imgURL ? this.header.imgURL : placeholderLogo;
+    },
     textFormat() {
       if (!this.text) {
         return "";

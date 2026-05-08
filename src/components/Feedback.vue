@@ -1,24 +1,30 @@
 <template>
   <div id="feedback-container" class="container-fluid section">
-    <div id="feedback-data" class="row d-flex align-items-center">
-      <div class="col-4 offset-1 text-end">
+    <div id="feedback-main" class="row">
+      <div id="feedback-left" class="col-4 offset-1">
         <div id="feedback-title">
           <h2 class="title" v-html="this.title"></h2>
           <p v-html="this.paragraph"></p>
         </div>
         <div id="feedback-list">
-          <div v-for="item in listElements" :key="item" @mouseover="select(item.position)" class="d-flex justify-end align-items-center">
-            <p :class="[isSelected(item.position) ? 'selected' : '', 'text-uppercase highlight']">
-              {{ item.position }} <br />
-              <span class="small">({{ item.company }})</span>
-            </p>
-            <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
-              <rect v-if="isSelected(item.position)" width="15" height="15" x="46.5" y="-32.75" />
-            </svg>
+          <div class="main-column text-end">
+            <div v-for="cat in categories" :key="cat.key" :class="['main-cell', { selected: isCategorySelected(cat.key) }]" @mouseover="selectCategory(cat.key)">
+              <div class="main-cell-inner">
+                <p :class="[isCategorySelected(cat.key) ? 'selected' : '', 'text-uppercase highlight']">{{ cat.title }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="submenu-column text-end">
+            <div v-for="item in selectedCategory.items" :key="item.key" class="menu-row d-flex justify-end align-items-center" @mouseover="selectItem(item.key)">
+              <p :class="[isItemSelected(item.key) ? 'selected' : '', 'text-uppercase highlight']">{{ item.title }}</p>
+              <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
+                <rect v-if="isItemSelected(item.key)" width="15" height="15" x="46.5" y="-32.75" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-      <div id="feedback-text" class="col-4 offset-1">
+      <div id="feedback-text" class="col-5">
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>
@@ -45,38 +51,43 @@ export default {
     return {
       title: feedback.en.title,
       paragraph: feedback.en.paragraph,
-      comments: feedback.en.comments,
-      selected: { position: "" },
+      categories: feedback.en.categories,
+      selectedCategoryKey: feedback.en.categories[0].key,
+      selectedItemKey: feedback.en.categories[0].items[0].key,
     };
   },
-  mounted() {
-    this.selected = this.comments[0];
-  },
   computed: {
-    /* Formats selectable elements of list */
-    listElements() {
-      return this.comments
-        ? this.comments.map((el) => ({
-            position: el.position,
-            company: el.company,
-          }))
-        : [];
+    selectedCategory() {
+      return this.categories.find((c) => c.key === this.selectedCategoryKey) || this.categories[0];
+    },
+    selected() {
+      const cat = this.selectedCategory;
+      return cat.items.find((i) => i.key === this.selectedItemKey) || cat.items[0];
     },
     header() {
       return {
         imgURL: this.selected.imgURL,
-        headline: this.selected.author,
-        subheadline: this.selected.company,
-        subcomment: this.selected.position,
+        headline: this.selected.title,
+        subheadline: this.selected.position,
+        subcomment: this.selected.duration,
       };
     },
   },
   methods: {
-    isSelected(item) {
-      return this.selected.position == item;
+    isCategorySelected(key) {
+      return this.selectedCategoryKey === key;
     },
-    select(item) {
-      this.selected = this.comments.filter((el) => el.position == item)[0];
+    isItemSelected(key) {
+      return this.selectedItemKey === key;
+    },
+    selectCategory(key) {
+      if (this.selectedCategoryKey === key) return;
+      this.selectedCategoryKey = key;
+      const cat = this.categories.find((c) => c.key === key);
+      if (cat && cat.items.length) this.selectedItemKey = cat.items[0].key;
+    },
+    selectItem(key) {
+      this.selectedItemKey = key;
     },
   },
 };

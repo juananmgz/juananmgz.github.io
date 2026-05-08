@@ -100,6 +100,8 @@ $menu-anim-duration: 0.2s;
 
     .selected-mark {
       width: 70px;
+      flex-shrink: 0;
+      overflow: visible;
 
       rect {
         stroke: $text;
