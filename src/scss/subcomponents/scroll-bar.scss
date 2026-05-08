@@ -21,25 +21,26 @@
 }
 
 .diamond {
-  transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
   cursor: pointer;
-  transform: translateX(19px) translateY(-19px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .diamond:hover {
-  transform: scale(1.5) translateX(13px) translateY(-13px);
+  transform: scale(1.15);
 }
 
 .diamond-rect {
   fill: $highlight;
-  stroke: none;
-  transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
-  transform: rotate(45deg) translateX(12px) translateY(-12px);
+  stroke: $highlight;
+  stroke-width: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: rotate(45deg) scale(0.5);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), fill 0.4s ease, stroke-width 0.4s ease;
 }
 
 .diamond--selected .diamond-rect {
-  fill: none;
-  stroke: $highlight;
+  fill: transparent;
   stroke-width: 2px;
-  transform: rotate(0deg) translateY(5px);
+  transform: rotate(0deg) scale(1);
 }

@@ -4,10 +4,10 @@
     <div v-for="index in number" :key="index" class="diamond-wrapper" @click="scrollToSection(index - 1)">
       <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" :class="['diamond', { 'diamond--selected': isSelected(index - 1) }]" viewBox="0 0 39 39">
         <rect
-          :width="isSelected(index - 1) ? '20' : '10'"
-          :height="isSelected(index - 1) ? '20' : '10'"
-          :x="isSelected(index - 1) ? '7' : '10'"
-          :y="isSelected(index - 1) ? '7' : '10'"
+          width="20"
+          height="20"
+          x="9.5"
+          y="9.5"
           :class="['diamond-rect', { 'diamond-rect--selected': isSelected(index - 1) }]"
         />
       </svg>
