@@ -6,16 +6,25 @@
           <h2 class="title" v-html="this.title"></h2>
           <p v-html="this.paragraph"></p>
         </div>
-        <div id="background-list" class="text-end">
-          <div v-for="item in listElements" :key="item" @mouseover="select(item)" class="d-flex justify-end align-items-center">
-            <p :class="[isSelected(item) ? 'selected' : '', 'text-uppercase highlight']">{{ item }}</p>
-            <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
-              <rect v-if="isSelected(item)" width="15" height="15" x="46.5" y="-32.75" />
-            </svg>
+        <div id="background-list">
+          <div class="main-column text-end">
+            <div v-for="cat in categories" :key="cat.key" :class="['main-cell', { selected: isCategorySelected(cat.key) }]" @mouseover="selectCategory(cat.key)">
+              <div class="main-cell-inner">
+                <p :class="[isCategorySelected(cat.key) ? 'selected' : '', 'text-uppercase highlight']">{{ cat.title }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="submenu-column text-end">
+            <div v-for="item in selectedCategory.items" :key="item.key" class="menu-row d-flex justify-end align-items-center" @mouseover="selectItem(item.key)">
+              <p :class="[isItemSelected(item.key) ? 'selected' : '', 'text-uppercase highlight']">{{ item.title }}</p>
+              <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
+                <rect v-if="isItemSelected(item.key)" width="15" height="15" x="46.5" y="-32.75" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-      <div id="background-text" class="col-4 offset-1">
+      <div id="background-text" class="col-5">
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>
@@ -42,18 +51,18 @@ export default {
     return {
       title: background.en.title,
       paragraph: background.en.paragraph,
-      background: this.backgroundFormat(),
-      awards: background.en.awards,
-      selected: { title: "" },
+      categories: background.en.categories,
+      selectedCategoryKey: background.en.categories[0].key,
+      selectedItemKey: background.en.categories[0].items[0].key,
     };
   },
-  mounted() {
-    this.selected = this.background[0];
-  },
   computed: {
-    /* Formats selectable elements of list */
-    listElements() {
-      return this.background ? this.background.map((el) => el.title) : [];
+    selectedCategory() {
+      return this.categories.find((c) => c.key === this.selectedCategoryKey) || this.categories[0];
+    },
+    selected() {
+      const cat = this.selectedCategory;
+      return cat.items.find((i) => i.key === this.selectedItemKey) || cat.items[0];
     },
     header() {
       return {
@@ -65,70 +74,20 @@ export default {
     },
   },
   methods: {
-    /* Formats background (experience + education + awards) */
-    backgroundFormat() {
-      // Experience
-      let formatted = [...background.en.experience];
-
-      // Education
-      var educationDesc = background.en.education.desc;
-
-      if (background.en.education.courses.length > 0) {
-        educationDesc += "<ul>";
-        for (var course of background.en.education.courses) {
-          educationDesc += "<li>" + course.title + "." + "<span class='font-italic'>" + course.entity + "</span> (" + course.year + ") </li>";
-        }
-        educationDesc += "</ul>";
-      }
-
-      let education = {
-        title: background.en.education.title,
-        imgURL: background.en.education.imgURL,
-        position: background.en.education.position,
-        duration: "",
-        desc: educationDesc,
-      };
-
-      formatted.push(education);
-
-      // Awards
-      var awardDesc = background.en.awards.awardsEngineering.desc;
-
-      if (background.en.awards.awardsMusic.awards.length > 0) {
-        educationDesc += "<ul>";
-        for (var award of background.en.awards.awardsEngineering.awards) {
-          awardDesc += "<li><span class='highlight font-default'>" + award.title + "</span>. " + "<span class='font-italic'>" + award.organization + "</span> </li>";
-        }
-        educationDesc += "</ul>";
-      }
-
-      awardDesc += "<br/>" + background.en.awards.awardsMusic.desc;
-
-      if (background.en.awards.awardsMusic.awards.length > 0) {
-        educationDesc += "<ul>";
-        for (var award of background.en.awards.awardsMusic.awards) {
-          awardDesc += "<li>" + award.title + "." + award.organization + "</li>";
-        }
-        educationDesc += "</ul>";
-      }
-
-      let awards = {
-        title: background.en.awards.title,
-        imgURL: background.en.awards.imgURL,
-        position: background.en.awards.position,
-        duration: "",
-        desc: awardDesc,
-      };
-
-      formatted.push(awards);
-
-      return formatted;
+    isCategorySelected(key) {
+      return this.selectedCategoryKey === key;
     },
-    isSelected(item) {
-      return this.selected.title == item;
+    isItemSelected(key) {
+      return this.selectedItemKey === key;
     },
-    select(item) {
-      this.selected = this.background.filter((el) => el.title == item)[0];
+    selectCategory(key) {
+      if (this.selectedCategoryKey === key) return;
+      this.selectedCategoryKey = key;
+      const cat = this.categories.find((c) => c.key === key);
+      if (cat && cat.items.length) this.selectedItemKey = cat.items[0].key;
+    },
+    selectItem(key) {
+      this.selectedItemKey = key;
     },
   },
 };
