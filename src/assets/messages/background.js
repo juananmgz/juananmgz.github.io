@@ -1,6 +1,6 @@
 const background = {
   en: {
-    title: `Over the years,`,
+    title: `Over the<br/>years,`,
     paragraph: `I’ve tackled all sorts of projects, from complex enterprise apps to snazzy marketing websites.<br/>Here's a snapshot of my career road trip so far:`,
     experience: [
       {

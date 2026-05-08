@@ -1,7 +1,17 @@
 .box-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
   p {
     margin: 0 !important;
     padding: 0 !important;
+  }
+
+  .box-header-text {
+    flex: 1;
+    min-width: 0;
+    max-width: 70%;
   }
 
   .box-header-headline,
@@ -14,11 +24,13 @@
   }
 
   .box-subheader {
-    display: flex;
-    justify-content: space-between;
+    .box-header-subheadline {
+      word-wrap: break-word;
+    }
 
     .box-header-subcomment {
       font-style: italic;
+      margin-top: 4px !important;
     }
   }
 
@@ -28,9 +40,7 @@
 }
 
 .box-round-image {
-  position: absolute;
-  left: -48px;
-  bottom: -48px;
+  flex-shrink: 0;
 
   figure {
     border-radius: 50%;

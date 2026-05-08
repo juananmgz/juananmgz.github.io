@@ -1,13 +1,28 @@
-#background-title {
-  padding-top: 5vh;
+#background-container {
+  padding: 5vh 0;
 }
 
-#background-data {
-  height: calc(80vh - 5vh - 120px);
+#background-main {
+  height: 90vh;
+  align-items: stretch;
+}
+
+#background-left {
+  display: flex;
+  flex-direction: column;
+
+  #background-title {
+    flex-shrink: 0;
+  }
 
   #background-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     & > div {
-      margin: 35px 0;
+      margin: 1vh 0;
       justify-content: end;
 
       p {
@@ -16,7 +31,7 @@
     }
 
     & > div:nth-last-child(2) {
-      margin-top: 80px;
+      margin-top: 4vh;
     }
 
     .selected-mark {
@@ -30,10 +45,10 @@
       }
     }
   }
+}
 
-  #background-text {
-    height: 90%;
-  }
+#background-text {
+  display: flex;
 }
 
 #background-title-shadow {

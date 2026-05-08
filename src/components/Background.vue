@@ -1,21 +1,21 @@
 <template>
   <div id="background-container" class="container-fluid section">
-    <div id="background-title" class="row">
-      <div class="col-10 offset-1">
-        <h2 class="title" v-html="this.title"></h2>
-        <p v-html="this.paragraph"></p>
-      </div>
-    </div>
-    <div id="background-data" class="row d-flex align-items-center">
-      <div id="background-list" class="col-3 offset-1 text-end">
-        <div v-for="item in listElements" :key="item" @mouseover="select(item)" class="d-flex justify-end align-items-center">
-          <p :class="[isSelected(item) ? 'selected' : '', 'text-uppercase highlight']">{{ item }}</p>
-          <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
-            <rect v-if="isSelected(item)" width="15" height="15" x="46.5" y="-32.75" />
-          </svg>
+    <div id="background-main" class="row">
+      <div id="background-left" class="col-3 offset-1">
+        <div id="background-title">
+          <h2 class="title" v-html="this.title"></h2>
+          <p v-html="this.paragraph"></p>
+        </div>
+        <div id="background-list" class="text-end">
+          <div v-for="item in listElements" :key="item" @mouseover="select(item)" class="d-flex justify-end align-items-center">
+            <p :class="[isSelected(item) ? 'selected' : '', 'text-uppercase highlight']">{{ item }}</p>
+            <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
+              <rect v-if="isSelected(item)" width="15" height="15" x="46.5" y="-32.75" />
+            </svg>
+          </div>
         </div>
       </div>
-      <div id="background-text" class="col-5 offset-1">
+      <div id="background-text" class="col-4">
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>

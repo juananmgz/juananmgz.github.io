@@ -2,11 +2,13 @@
   <div :class="cornersClass">
     <div class="desc box-highlight-wrap">
       <div class="box-header" v-if="header">
-        <p class="box-header-headline">{{ this.header.headline }}</p>
+        <div class="box-header-text">
+          <p class="box-header-headline">{{ this.header.headline }}</p>
 
-        <div class="box-subheader">
-          <p class="box-header-subheadline">{{ this.header.subheadline }}</p>
-          <p class="box-header-subcomment">{{ this.header.subcomment }}</p>
+          <div class="box-subheader">
+            <p class="box-header-subheadline">{{ this.header.subheadline }}</p>
+            <p class="box-header-subcomment">{{ this.header.subcomment }}</p>
+          </div>
         </div>
         <div class="box-round-image">
           <figure>
