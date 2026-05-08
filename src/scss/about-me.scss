@@ -1,0 +1,40 @@
+#coding-sec,
+#design-sec {
+  display: flex;
+  align-items: center;
+
+  .title {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+  }
+}
+
+#coding-sec {
+  .title {
+    transform: rotate(0deg);
+  }
+
+  .desc {
+    text-align: right;
+  }
+
+  margin-bottom: -150px;
+}
+
+#design-sec {
+  margin-top: -150px;
+}
+
+#about-me-title-shadow {
+  margin-top: -100vh;
+  height: 100vh;
+
+  #coding-title-shadow {
+    padding-top: 10vh !important;
+  }
+
+  #design-title-shadow {
+    padding-top: 20vh !important;
+  }
+}

@@ -1,0 +1,89 @@
+$border-round: 60px;
+$border-corner: 0px;
+$thickness: 1px;
+
+$scrollbar-margin: 20px;
+
+@mixin highlight-container($orientation, $tl, $tr, $bl, $br) {
+  background: linear-gradient($orientation, $highlight 0, $highlight 40%, $transparent 70%);
+
+  border-radius: $tl $tr $bl $br;
+}
+
+@mixin background-container($orientation) {
+  background: linear-gradient($orientation, $bg 0, $bg 70%, $transparent 90%);
+}
+
+.box-highlight-wrap {
+  padding: 48px !important;
+  height: 100%;
+
+  .text-hightlight-wrap {
+    height: 100%;
+    overflow: auto;
+    margin-right: -$scrollbar-margin;
+    width: calc(100% + $scrollbar-margin);
+  }
+}
+
+.box-highlight {
+  background: $highlight;
+  padding: $thickness;
+  height: 100%;
+
+  &.top-left {
+    @include highlight-container(180deg, $border-round, $border-corner, $border-corner, $border-corner);
+
+    .box-highlight-wrap {
+      border-radius: calc($border-round - $thickness) $border-corner $border-corner $border-corner;
+      @include background-container(180deg);
+    }
+  }
+
+  &.top-right {
+    @include highlight-container(180deg, $border-corner, $border-round, $border-corner, $border-corner);
+
+    .box-highlight-wrap {
+      border-radius: $border-corner calc($border-round - $thickness) $border-corner $border-corner;
+      @include background-container(180deg);
+    }
+  }
+
+  &.bottom-left {
+    @include highlight-container(0deg, $border-corner, $border-corner, $border-corner, $border-round);
+
+    .box-highlight-wrap {
+      border-radius: $border-corner $border-corner $border-corner calc($border-round - $thickness);
+      @include background-container(0deg);
+    }
+  }
+
+  &.bottom-right {
+    @include highlight-container(0deg, $border-corner, $border-corner, $border-round, $border-corner);
+
+    .box-highlight-wrap {
+      border-radius: $border-corner $border-corner calc($border-round - $thickness) $border-corner;
+      @include background-container(0deg);
+    }
+  }
+
+  p {
+    padding-right: $scrollbar-margin;
+  }
+  p:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  /* Scrollbars */
+
+  ::-webkit-scrollbar {
+    content: "scroll";
+    width: 2px;
+    color: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $text;
+    border-radius: 6px;
+  }
+}
