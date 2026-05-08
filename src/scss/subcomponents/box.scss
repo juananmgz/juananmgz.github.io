@@ -32,6 +32,25 @@
       font-style: italic;
       margin-top: 4px !important;
     }
+
+    .header-collapse-enter-active,
+    .header-collapse-leave-active {
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+
+    .header-collapse-enter-from,
+    .header-collapse-leave-to {
+      max-height: 0 !important;
+      opacity: 0;
+      margin-top: 0 !important;
+    }
+
+    .header-collapse-enter-to,
+    .header-collapse-leave-from {
+      max-height: 4em;
+      opacity: 1;
+    }
   }
 
   border-bottom: 1px solid $highlight;

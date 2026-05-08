@@ -6,8 +6,12 @@
           <p class="box-header-headline">{{ this.header.headline }}</p>
 
           <div class="box-subheader">
-            <p class="box-header-subheadline">{{ this.header.subheadline }}</p>
-            <p class="box-header-subcomment">{{ this.header.subcomment }}</p>
+            <transition name="header-collapse">
+              <p v-if="header.subheadline" class="box-header-subheadline">{{ this.header.subheadline }}</p>
+            </transition>
+            <transition name="header-collapse">
+              <p v-if="header.subcomment" class="box-header-subcomment">{{ this.header.subcomment }}</p>
+            </transition>
           </div>
         </div>
         <div class="box-round-image">
