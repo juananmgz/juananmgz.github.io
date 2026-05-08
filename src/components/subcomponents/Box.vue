@@ -10,7 +10,7 @@
         </div>
         <div class="box-round-image">
           <figure>
-            <img :src="header.imgURL" :alt="header.headline + ' picture'" class="rounded-circle" width="80" height="80" loading="lazy" decoding="async" />
+            <img :src="header.imgURL" :alt="header.headline + ' picture'" class="rounded-circle" width="80" height="80" loading="lazy" decoding="async" @error="onImgError" />
           </figure>
         </div>
       </div>
@@ -22,12 +22,19 @@
 </template>
 
 <script>
+import placeholderLogo from "@/assets/images/placeholder-logo.svg";
+
 export default {
   name: "Box",
   props: {
     text: String,
     header: Object,
     corners: String,
+  },
+  methods: {
+    onImgError(e) {
+      e.target.src = placeholderLogo;
+    },
   },
   computed: {
     textFormat() {

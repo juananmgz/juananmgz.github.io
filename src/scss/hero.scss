@@ -55,11 +55,19 @@
 
     img {
       height: 90vh;
+      width: auto;
+      object-fit: contain;
     }
   }
 }
 
+#hero-wrapper {
+  position: relative;
+}
+
 #hero-title-shadow {
-  margin-top: -85vh;
-  margin-bottom: 17.5vh;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
 }

@@ -28,19 +28,27 @@
 }
 
 .box-round-image {
-  margin-left: -94px;
-  margin-top: 40px;
-  margin-bottom: -140px;
-  display: flex;
+  position: absolute;
+  left: -48px;
+  bottom: -48px;
 
   figure {
-    border-radius: 50px;
+    border-radius: 50%;
     background: $bg;
     border: 1px solid $highlight;
+    margin: 0;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   img {
-    margin: 4px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
   }
 }
 

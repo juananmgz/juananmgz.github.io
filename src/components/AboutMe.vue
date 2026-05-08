@@ -1,11 +1,11 @@
 <template>
   <div id="about-me-container" class="container-fluid section">
-    <div class="row vh-100 d-flex align-items-center">
-      <div id="coding-sec" class="col-7 offset-4">
+    <div class="row d-flex">
+      <div id="coding-sec">
         <Box :text="this.coding.desc" corners="top-left" class="desc"></Box>
         <h2 class="title" v-html="this.coding.title"></h2>
       </div>
-      <div id="design-sec" class="col-7 offset-1">
+      <div id="design-sec">
         <h2 class="title" v-html="this.design.title"></h2>
         <Box :text="this.design.desc" corners="bottom-right"></Box>
       </div>

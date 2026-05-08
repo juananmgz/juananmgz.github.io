@@ -29,6 +29,7 @@ export default {
     return {
       numberOfSections: 0,
       currentSectionIndex: 0,
+      sectionRatios: [],
     };
   },
   mounted() {
@@ -44,17 +45,20 @@ export default {
     observeSections() {
       const sections = Array.from(document.querySelectorAll(".section"));
       this.numberOfSections = sections.length;
+      this.sectionRatios = new Array(sections.length).fill(0);
 
       this.observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const idx = sections.indexOf(entry.target);
-              if (idx !== -1) this.currentSectionIndex = idx;
+            const idx = sections.indexOf(entry.target);
+            if (idx !== -1) {
+              this.sectionRatios[idx] = entry.intersectionRatio;
             }
           });
+          const maxIdx = this.sectionRatios.indexOf(Math.max(...this.sectionRatios));
+          if (maxIdx !== -1) this.currentSectionIndex = maxIdx;
         },
-        { threshold: 0.55 }
+        { threshold: Array.from({ length: 11 }, (_, i) => i / 10) }
       );
 
       sections.forEach((s) => this.observer.observe(s));

@@ -1,7 +1,19 @@
+#about-me-container {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+}
+
 #coding-sec,
 #design-sec {
   display: flex;
   align-items: center;
+  max-width: 100%;
+  flex: 0 0 auto;
 
   .title {
     transform: rotate(180deg);
@@ -11,6 +23,10 @@
 }
 
 #coding-sec {
+  width: 58.33%;
+  margin-left: 33.33%;
+  padding-top: 5vh;
+
   .title {
     transform: rotate(0deg);
   }
@@ -19,22 +35,42 @@
     text-align: right;
   }
 
-  margin-bottom: -150px;
+  .box-highlight,
+  .box-highlight-wrap,
+  .text-hightlight-wrap {
+    height: auto;
+  }
 }
 
 #design-sec {
-  margin-top: -150px;
+  width: 58.33%;
+  margin-left: 8.33%;
+  margin-top: -60px;
+  padding-bottom: 5vh;
+
+  .box-highlight,
+  .box-highlight-wrap,
+  .text-hightlight-wrap {
+    height: auto;
+  }
 }
 
 #about-me-title-shadow {
+  position: relative;
   margin-top: -100vh;
   height: 100vh;
 
   #coding-title-shadow {
-    padding-top: 10vh !important;
+    position: absolute;
+    top: -16vh;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   #design-title-shadow {
-    padding-top: 20vh !important;
+    position: absolute;
+    bottom: -16vh;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
