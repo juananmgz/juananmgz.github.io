@@ -4,6 +4,20 @@ const feedback = {
     paragraph: `My partners left comments about my work-staying. Some of them are translated, but originals can be found in my linkedin profile ;)`,
     comments: [
       {
+        imgURL: ``,
+        author: `Andreas Steinhausen`,
+        company: `Concentrio AG`,
+        position: `Technical Lead`,
+        desc: `I had the opportunity to collaborate with Juan for two years at Concentrio AG, where I worked as the Technical Lead and he contributed as a Front-End Developer and UX Expert. During that time, Juan proved himself to be a <span class="highlight">highly reliable, responsible, and creative</span> professional with a strong sense of teamwork and an exceptionally positive attitude.<br/><br/>He joined the team as a Junior and, in my view, grew into a <span class="highlight">Senior-level developer</span> through his dedication, fast learning, and deep understanding of both front-end technologies and user experience. Juan has a rare talent for translating complex processes into clear, intuitive, and visually appealing interfaces. His thoughtful approach and consistent quality made a real impact on our projects and on the team.<br/><br/>It was a real pleasure to collaborate with Juan, and I highly recommend him for any position that values <span class="highlight">technical skill, UX insight, and a collaborative mindset</span>.`,
+      },
+      {
+        imgURL: ``,
+        author: `Rocío Álvarez González`,
+        company: `Concentrio AG`,
+        position: `HR Manager`,
+        desc: `I had the pleasure of working with Juanan for two years, and I can confidently say that he is an extremely <span class="highlight">versatile, motivated, and reliable</span> professional. Juanan brings a positive attitude and energy to every project, always tackling challenges with enthusiasm and a practical mindset. His ability to deliver high-quality work while ensuring that the results are both useful and efficient sets him apart.<br/><br/>Juanan is <span class="highlight">proactive and always eager to learn</span>, taking on new challenges without hesitation and constantly seeking to improve his skills. He’s the kind of team member who is always ready to lend a hand, even when it requires learning something new or going the extra mile. His collaborative approach, working effortlessly across different areas of the business, makes him an integral part of any team.<br/><br/>His attention to detail, loyalty to his colleagues, and commitment to doing things the right way ensure that he’s a <span class="highlight">valuable asset</span>. Juanan also has a unique ability to connect with others, thanks to his artistic side and genuine interest in different cultures, which enhances the team dynamic.<br/><br/>In summary, Juanan is a dedicated, motivated, and <span class="highlight">incredibly valuable team member</span>, and any company would be fortunate to have him.`,
+      },
+      {
         imgURL: `https://media.licdn.com/dms/image/v2/C5603AQF1TNtQf3-DvA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517349286412?e=1732147200&v=beta&t=EZvhSuZvr-Sp74RBYYUBYwz7f50KmHKaph-Fqff8q84`,
         author: `Guillem Tizne Mena`,
         company: `Concentrio AG`,
