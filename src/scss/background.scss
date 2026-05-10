@@ -2,7 +2,9 @@ $menu-translate-duration: 0.2s;
 $menu-anim-duration: 0.2s;
 
 #background-container {
+  position: relative;
   padding: 5vh 0;
+  overflow: hidden;
 }
 
 #background-main {
@@ -122,12 +124,9 @@ $menu-anim-duration: 0.2s;
 }
 
 #background-title-shadow {
-  margin-top: -90vh;
-  margin-bottom: 56vh;
-}
-
-#background-title-shadow {
-  .title-shadow {
-    transform: translateX(-40%);
-  }
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-40%);
+  margin: 0;
 }

@@ -1,5 +1,8 @@
 <template>
   <div id="background-container" class="container-fluid section">
+    <div id="background-title-shadow" class="title-shadow">
+      <h1 v-html="this.title"></h1>
+    </div>
     <div id="background-main" class="row">
       <div id="background-left" class="col-4 offset-1">
         <div id="background-title">
@@ -28,10 +31,6 @@
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>
-  </div>
-
-  <div id="background-title-shadow" class="title-shadow">
-    <h1 v-html="this.title"></h1>
   </div>
 </template>
 

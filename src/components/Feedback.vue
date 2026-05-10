@@ -1,5 +1,8 @@
 <template>
   <div id="feedback-container" class="container-fluid section">
+    <div id="feedback-title-shadow" class="title-shadow">
+      <h1 v-html="this.title"></h1>
+    </div>
     <div id="feedback-main" class="row">
       <div id="feedback-left" class="col-4 offset-1">
         <div id="feedback-title">
@@ -28,10 +31,6 @@
         <Box :header="this.header" :text="this.selected.desc" corners="top-right"></Box>
       </div>
     </div>
-  </div>
-
-  <div id="feedback-title-shadow" class="title-shadow">
-    <h1 v-html="this.title"></h1>
   </div>
 </template>
 
