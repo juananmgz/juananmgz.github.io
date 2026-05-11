@@ -1,6 +1,3 @@
-$menu-translate-duration: 0.2s;
-$menu-anim-duration: 0.2s;
-
 #background-container {
   position: relative;
   padding: 5vh 0;
@@ -24,94 +21,8 @@ $menu-anim-duration: 0.2s;
 
   #background-list {
     flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: start;
     margin-right: 40px;
     margin-top: 3em;
-    min-height: 0;
-
-    .main-column,
-    .submenu-column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 2vh;
-      min-width: calc(16rem + 70px);
-    }
-
-    .main-column {
-      position: relative;
-      margin-right: 50px;
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: -30px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: $highlight;
-      }
-
-      .main-cell {
-        position: relative;
-        cursor: pointer;
-        margin-right: 0;
-
-        .main-cell-inner {
-          transform: translateX(-25px);
-          transition: transform $menu-translate-duration cubic-bezier(0.2, 0, 0.4, 1);
-
-          p {
-            margin: 0;
-          }
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: -30px;
-          height: 2px;
-          width: 0;
-          background: $highlight;
-          transition: width $menu-anim-duration cubic-bezier(1, 0.4, 0, 0.2);
-        }
-
-        &.selected {
-          .main-cell-inner {
-            transform: translateX(0);
-          }
-
-          &::after {
-            width: 20px;
-          }
-        }
-      }
-    }
-
-    .menu-row {
-      cursor: pointer;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .selected-mark {
-      width: 70px;
-      flex-shrink: 0;
-      overflow: visible;
-
-      rect {
-        stroke: $text;
-        stroke-width: 3px;
-        fill: transparent;
-        transform: rotate(45deg);
-      }
-    }
   }
 }
 
