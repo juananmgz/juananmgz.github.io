@@ -2,6 +2,7 @@
   <ScrollBar :number="numberOfSections" :current="currentSectionIndex" @update-current="updateCurrent" />
   <Hero @update-current="updateCurrent" />
   <AboutMe />
+  <Summary />
   <Background />
   <Feedback />
   <Contact />
@@ -10,6 +11,7 @@
 <script>
 import Hero from "@/components/Hero.vue";
 import AboutMe from "@/components/AboutMe.vue";
+import Summary from "@/components/Summary.vue";
 import Background from "@/components/Background.vue";
 import Contact from "@/components/Contact.vue";
 import Feedback from "@/components/Feedback.vue";
@@ -20,6 +22,7 @@ export default {
   components: {
     Hero,
     AboutMe,
+    Summary,
     Background,
     Feedback,
     Contact,

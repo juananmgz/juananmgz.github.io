@@ -1,0 +1,35 @@
+#summary-container {
+  position: relative;
+  padding: 5vh 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#summary-main {
+  width: 100%;
+  align-items: center;
+}
+
+#summary-content {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-bottom: 1em;
+  }
+
+  .box-highlight,
+  .box-highlight-wrap,
+  .text-hightlight-wrap {
+    height: auto;
+  }
+}
+
+#summary-title-shadow {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
