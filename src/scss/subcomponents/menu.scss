@@ -85,7 +85,16 @@ $menu-anim-duration: 0.2s;
       stroke: $text;
       stroke-width: 3px;
       fill: transparent;
-      transform: rotate(45deg);
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: rotate(45deg) scale(0);
+      opacity: 0;
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1.4), opacity 0.2s ease;
+
+      &.visible {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+      }
     }
   }
 }

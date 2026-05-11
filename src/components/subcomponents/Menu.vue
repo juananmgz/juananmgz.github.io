@@ -21,7 +21,7 @@
       >
         <p :class="[isItemSelected(item.key) ? 'selected' : '', 'text-uppercase highlight']">{{ item.title }}</p>
         <svg width="39" height="39" xmlns="http://www.w3.org/2000/svg" class="selected-mark">
-          <rect v-if="isItemSelected(item.key)" width="15" height="15" x="46.5" y="-32.75" />
+          <rect :class="{ visible: isItemSelected(item.key) }" width="15" height="15" x="46.5" y="10" />
         </svg>
       </div>
     </div>
