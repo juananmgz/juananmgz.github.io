@@ -12,7 +12,7 @@ const background = {
             title: "Concentrio AG",
             position: "Front-End Developer",
             duration: "November 2022 – Currently",
-            imgURL: "/images/feedback/concentrio-logo.svg",
+            imgURL: "/images/feedback/concentrio-logo.png",
             desc: `Currently, I'm part of the <span class="highlight marker">Concentrio AG</span> front-end team, where we develop graphical solutions for leading automotive companies. Following an agile workflow, I serve as front-end developer and the UI/UX lead designer.<br/><span class="highlight font-default">My architectural proposals</span> have improved comprehensibility and usability, reducing task completion time and action complexity. One of my proudest achievements is successfully executing a full user experience revamp, resulting in what the client described as a "more usable, fresh, and professional interface"<br/>Since the end of 2024, I've performed as <span class="highlight font-default">Scrum Master</span>, leading the team to achieve a 20% increase in velocity and a 15% improvement in sprint goal completion rate by facilitating Scrum events, removing impediments, and promoting best practices, gaining additional hours per sprint for value-driven development.`,
           },
           {
@@ -28,7 +28,7 @@ const background = {
             title: "Esalab",
             position: "Web Apps Developer",
             duration: "February 2021 – July 2021",
-            imgURL: "/images/feedback/esalab-logo.svg",
+            imgURL: "/images/feedback/esalab-logo.jpeg",
             desc: `Earlier in my career, I had a researcher experience at <span class="highlight marker">Esalab</span>, where I worked on IoT projects from hardware to software, using all my competencies in engineering and technology. I also gained experience with a range of full-stack development technologies and learned other skills such as electronics and 3D design and printing`,
           },
         ],
