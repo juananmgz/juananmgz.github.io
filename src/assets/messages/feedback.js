@@ -1,7 +1,9 @@
 const feedback = {
   en: {
     title: `Feedback`,
-    paragraph: `My partners left comments about my work-staying. Some of them are translated, but originals can be found in my linkedin profile ;)`,
+    paragraph: [
+      `My partners left comments about my work-staying. Some of them are translated, but originals can be found in my linkedin profile ;)`,
+    ],
     categories: [
       {
         key: "concentrio",
@@ -13,7 +15,11 @@ const feedback = {
             position: "Technical Lead",
             duration: "Concentrio AG",
             imgURL: `/images/feedback/feedback-andreas.png`,
-            desc: `I had the opportunity to collaborate with Juan for two years at Concentrio AG, where I worked as the Technical Lead and he contributed as a Front-End Developer and UX Expert. During that time, Juan proved himself to be a <span class="highlight">highly reliable, responsible, and creative</span> professional with a strong sense of teamwork and an exceptionally positive attitude.<br/><br/>He joined the team as a Junior and, in my view, grew into a <span class="highlight">Senior-level developer</span> through his dedication, fast learning, and deep understanding of both front-end technologies and user experience. Juan has a rare talent for translating complex processes into clear, intuitive, and visually appealing interfaces. His thoughtful approach and consistent quality made a real impact on our projects and on the team.<br/><br/>It was a real pleasure to collaborate with Juan, and I highly recommend him for any position that values <span class="highlight">technical skill, UX insight, and a collaborative mindset</span>.`,
+            desc: [
+              `I had the opportunity to collaborate with Juan for two years at Concentrio AG, where I worked as the Technical Lead and he contributed as a Front-End Developer and UX Expert. During that time, Juan proved himself to be a <span class="highlight">highly reliable, responsible, and creative</span> professional with a strong sense of teamwork and an exceptionally positive attitude.`,
+              `He joined the team as a Junior and, in my view, grew into a <span class="highlight">Senior-level developer</span> through his dedication, fast learning, and deep understanding of both front-end technologies and user experience. Juan has a rare talent for translating complex processes into clear, intuitive, and visually appealing interfaces. His thoughtful approach and consistent quality made a real impact on our projects and on the team.`,
+              `It was a real pleasure to collaborate with Juan, and I highly recommend him for any position that values <span class="highlight">technical skill, UX insight, and a collaborative mindset</span>.`,
+            ],
           },
           {
             key: "rocio",
@@ -21,7 +27,12 @@ const feedback = {
             position: "HR Manager",
             duration: "Concentrio AG",
             imgURL: `/images/feedback/feedback-rocio.jpeg`,
-            desc: `I had the pleasure of working with Juanan for two years, and I can confidently say that he is an extremely <span class="highlight">versatile, motivated, and reliable</span> professional. Juanan brings a positive attitude and energy to every project, always tackling challenges with enthusiasm and a practical mindset. His ability to deliver high-quality work while ensuring that the results are both useful and efficient sets him apart.<br/><br/>Juanan is <span class="highlight">proactive and always eager to learn</span>, taking on new challenges without hesitation and constantly seeking to improve his skills. He’s the kind of team member who is always ready to lend a hand, even when it requires learning something new or going the extra mile. His collaborative approach, working effortlessly across different areas of the business, makes him an integral part of any team.<br/><br/>His attention to detail, loyalty to his colleagues, and commitment to doing things the right way ensure that he’s a <span class="highlight">valuable asset</span>. Juanan also has a unique ability to connect with others, thanks to his artistic side and genuine interest in different cultures, which enhances the team dynamic.<br/><br/>In summary, Juanan is a dedicated, motivated, and <span class="highlight">incredibly valuable team member</span>, and any company would be fortunate to have him.`,
+            desc: [
+              `I had the pleasure of working with Juanan for two years, and I can confidently say that he is an extremely <span class="highlight">versatile, motivated, and reliable</span> professional. Juanan brings a positive attitude and energy to every project, always tackling challenges with enthusiasm and a practical mindset. His ability to deliver high-quality work while ensuring that the results are both useful and efficient sets him apart.`,
+              `Juanan is <span class="highlight">proactive and always eager to learn</span>, taking on new challenges without hesitation and constantly seeking to improve his skills. He’s the kind of team member who is always ready to lend a hand, even when it requires learning something new or going the extra mile. His collaborative approach, working effortlessly across different areas of the business, makes him an integral part of any team.`,
+              `His attention to detail, loyalty to his colleagues, and commitment to doing things the right way ensure that he’s a <span class="highlight">valuable asset</span>. Juanan also has a unique ability to connect with others, thanks to his artistic side and genuine interest in different cultures, which enhances the team dynamic.`,
+              `In summary, Juanan is a dedicated, motivated, and <span class="highlight">incredibly valuable team member</span>, and any company would be fortunate to have him.`,
+            ],
           },
           {
             key: "guillem",
@@ -29,7 +40,10 @@ const feedback = {
             position: "Senior Back-End Developer",
             duration: "Concentrio AG",
             imgURL: `/images/feedback/feedback-guillem.jpeg`,
-            desc: `I have had the pleasure of working closely with Juan Antonio for almost two years and have been impressed by his development skills. He demonstrates a deep understanding of web technologies and consistently delivers high-quality solutions.<br/><br/>Juan Antonio is not only a <span class="highlight">talented developer</span> but also a <span class="highlight">great team player</span>, always willing to collaborate and share insights. He would be a valuable asset to any team.`,
+            desc: [
+              `I have had the pleasure of working closely with Juan Antonio for almost two years and have been impressed by his development skills. He demonstrates a deep understanding of web technologies and consistently delivers high-quality solutions.`,
+              `Juan Antonio is not only a <span class="highlight">talented developer</span> but also a <span class="highlight">great team player</span>, always willing to collaborate and share insights. He would be a valuable asset to any team.`,
+            ],
           },
         ],
       },
@@ -43,7 +57,10 @@ const feedback = {
             position: "Strategic Creative Director",
             duration: "Monobo",
             imgURL: `/images/feedback/feedback-arturo.jpeg`,
-            desc: `It’s been a pleasant surprise to meet Juanan. Involved and commited with every project, with a great independence in the performance and very resolutive, within the deadlines.<br/><br/>He is passionate about his profession and that is a <span class="highlight">guarantee for any team</span>.`,
+            desc: [
+              `It’s been a pleasant surprise to meet Juanan. Involved and commited with every project, with a great independence in the performance and very resolutive, within the deadlines.`,
+              `He is passionate about his profession and that is a <span class="highlight">guarantee for any team</span>.`,
+            ],
           },
           {
             key: "fran",
@@ -51,7 +68,10 @@ const feedback = {
             position: "Fullstack Developer",
             duration: "Monobo",
             imgURL: `/images/feedback/feedback-fran.jpeg`,
-            desc: `I have been lucky to work with Juanan for several months at Monobo. He is an active person, who gets involved in every step of a project and is always willing to contribute. He has a gift and is very disposable to learn new tools, as well as being able to work both individually and as part of a team. He is a cheerful person who instills very good vibes and improves the team.<br/><br/>His time in the company has been <span class="highlight">very satisfactory</span> and I wish the best for the new incoming projects.`,
+            desc: [
+              `I have been lucky to work with Juanan for several months at Monobo. He is an active person, who gets involved in every step of a project and is always willing to contribute. He has a gift and is very disposable to learn new tools, as well as being able to work both individually and as part of a team. He is a cheerful person who instills very good vibes and improves the team.`,
+              `His time in the company has been <span class="highlight">very satisfactory</span> and I wish the best for the new incoming projects.`,
+            ],
           },
         ],
       },

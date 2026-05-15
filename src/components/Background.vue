@@ -7,7 +7,9 @@
       <div id="background-left" class="col-4 offset-1">
         <div id="background-title">
           <h2 class="title" v-html="this.title"></h2>
-          <p v-html="this.paragraph"></p>
+          <div class="paragraph-cluster">
+            <p v-for="(p, i) in this.paragraph" :key="i" v-html="p"></p>
+          </div>
         </div>
         <Menu id="background-list" :categories="categories" @select="onSelect" />
       </div>

@@ -1,7 +1,10 @@
 const contact = {
   en: {
     title: `Get in touch`,
-    paragraph: `Got a question or proposal, or just want to say hello? Feel free to reach out!<br/>My inbox is open and I’m currently exploring new opportunities!`,
+    paragraph: [
+      `Got a question or proposal, or just want to say hello? Feel free to reach out!`,
+      `My inbox is open and I’m currently exploring new opportunities!`,
+    ],
     name: {
       title: "Name",
       placeholder: "Enter your name",

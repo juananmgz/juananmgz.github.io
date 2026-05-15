@@ -20,7 +20,7 @@
           </figure>
         </div>
       </div>
-      <div class="box-content text-hightlight-wrap">
+      <div class="box-content text-hightlight-wrap paragraph-cluster">
         <p :class="{ margened: header }" v-for="paragraph in textFormat" :key="paragraph" v-html="paragraph"></p>
       </div>
     </div>
@@ -33,7 +33,7 @@ import placeholderLogo from "@/assets/images/placeholder-logo.svg";
 export default {
   name: "Box",
   props: {
-    text: String,
+    text: [String, Array],
     header: Object,
     corners: String,
   },
@@ -48,11 +48,9 @@ export default {
     },
     textFormat() {
       if (!this.text) {
-        return "";
+        return [];
       }
-
-      const splittedText = this.text.split("<br/>");
-      return splittedText;
+      return Array.isArray(this.text) ? this.text : [this.text];
     },
     cornersClass() {
       return "box-highlight " + this.corners;

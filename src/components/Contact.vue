@@ -3,7 +3,9 @@
     <div id="contact-title" class="row">
       <div class="col-10 offset-1">
         <h2 class="title" v-html="this.title"></h2>
-        <p v-html="this.paragraph"></p>
+        <div class="paragraph-cluster">
+          <p v-for="(p, i) in this.paragraph" :key="i" v-html="p"></p>
+        </div>
       </div>
     </div>
 
