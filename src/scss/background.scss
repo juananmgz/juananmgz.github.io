@@ -14,13 +14,14 @@
 #background-left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 100%;
 
   #background-title {
     flex-shrink: 0;
   }
 
   #background-list {
-    flex: 1;
     margin-right: 40px;
     margin-top: 3em;
   }
