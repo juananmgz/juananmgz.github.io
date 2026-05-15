@@ -4,7 +4,7 @@
       <h1 v-html="this.title"></h1>
     </div>
     <div id="background-main" class="row">
-      <div id="background-left" class="col-4 offset-1">
+      <div id="background-left" class="col-5">
         <div id="background-title">
           <h2 class="title" v-html="this.title"></h2>
           <div class="paragraph-cluster">
@@ -13,7 +13,7 @@
         </div>
         <Menu id="background-list" :categories="categories" @select="onSelect" />
       </div>
-      <div id="background-text" class="col-5">
+      <div id="background-text" class="col-7">
         <Box :header="this.header" :text="this.selected && this.selected.desc" corners="top-right"></Box>
       </div>
     </div>

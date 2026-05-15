@@ -12,8 +12,6 @@
 #design-sec {
   display: flex;
   align-items: center;
-  max-width: 100%;
-  flex: 0 0 auto;
 
   .title {
     transform: rotate(180deg);
@@ -23,8 +21,7 @@
 }
 
 #coding-sec {
-  width: 58.33%;
-  margin-left: 33.33%;
+  justify-content: end;
   padding-top: 5vh;
 
   .title {
@@ -43,8 +40,6 @@
 }
 
 #design-sec {
-  width: 58.33%;
-  margin-left: 8.33%;
   margin-top: -60px;
   padding-bottom: 5vh;
 
