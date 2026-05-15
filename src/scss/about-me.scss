@@ -56,9 +56,12 @@
 }
 
 #about-me-title-shadow {
-  position: relative;
-  margin-top: -100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 100vh;
+  pointer-events: none;
 
   #coding-title-shadow {
     position: absolute;
