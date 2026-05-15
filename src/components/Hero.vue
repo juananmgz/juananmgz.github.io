@@ -38,7 +38,7 @@ export default {
     scrollToSection() {
       const element = document.getElementById("contact-container");
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
         this.$emit("update-current", 4);
       }
     },

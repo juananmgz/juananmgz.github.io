@@ -31,7 +31,7 @@ export default {
       const sections = document.querySelectorAll(".section");
 
       if (sections) {
-        sections[index].scrollIntoView({ behavior: "smooth" });
+        sections[index].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
         this.$emit("update-current", index);
       }
     },
