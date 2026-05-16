@@ -103,9 +103,44 @@ export default {
         return { dy, dx };
       };
 
+      this.isScrollableAncestor = (el, dy) => {
+        let node = el;
+        while (node && node !== wrapper && node.nodeType === 1) {
+          const cs = getComputedStyle(node);
+          const canScrollY = /(auto|scroll)/.test(cs.overflowY) && node.scrollHeight > node.clientHeight;
+          if (canScrollY) {
+            const atTop = node.scrollTop <= 0;
+            const atBottom = node.scrollTop + node.clientHeight >= node.scrollHeight - 1;
+            if ((dy > 0 && !atBottom) || (dy < 0 && !atTop)) return true;
+          }
+          node = node.parentNode;
+        }
+        return false;
+      };
+
+      this.innerScrollActive = false;
+      this.innerScrollTimer = null;
+      const INNER_IDLE_MS = 250;
+
       this.onWheel = (e) => {
         const { dy, dx } = this.normalizeDelta(e);
         if (Math.abs(dy) <= Math.abs(dx)) return;
+        if (this.isScrollableAncestor(e.target, dy)) {
+          this.innerScrollActive = true;
+          clearTimeout(this.innerScrollTimer);
+          this.innerScrollTimer = setTimeout(() => {
+            this.innerScrollActive = false;
+          }, INNER_IDLE_MS);
+          return;
+        }
+        if (this.innerScrollActive) {
+          clearTimeout(this.innerScrollTimer);
+          this.innerScrollTimer = setTimeout(() => {
+            this.innerScrollActive = false;
+          }, INNER_IDLE_MS);
+          if (e.cancelable) e.preventDefault();
+          return;
+        }
         if (e.cancelable) e.preventDefault();
 
         clearTimeout(this.idleTimer);

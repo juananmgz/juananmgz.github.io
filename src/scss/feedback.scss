@@ -28,6 +28,8 @@
       align-self: stretch;
       margin-right: 40px;
       margin-top: 3rem;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
   }
 
@@ -43,6 +45,6 @@
   position: absolute;
   top: 10vh;
   left: 50%;
-  transform: translateX(-40%);
+  transform: translateX(-50%);
   margin: 0;
 }
