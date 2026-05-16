@@ -14,7 +14,9 @@ $menu-anim-duration: 0.2s;
     flex-direction: column;
     align-items: flex-end;
     gap: 2vh;
-    min-width: calc(16rem + 70px);
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: calc(16rem + 70px);
   }
 
   .main-column {

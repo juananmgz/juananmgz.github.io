@@ -13,7 +13,7 @@
         </div>
         <Menu id="feedback-list" :categories="categories" @select="onSelect" />
       </div>
-      <div id="feedback-text" class="col-7">
+      <div id="feedback-text" class="col-6 offset-1">
         <Box :header="this.header" :text="this.selected && this.selected.desc" corners="top-right"></Box>
       </div>
     </div>

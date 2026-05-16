@@ -1,9 +1,9 @@
 #summary-container {
   position: relative;
-  padding: 5vh 0;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 #summary-main {

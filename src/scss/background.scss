@@ -1,38 +1,32 @@
 #background-container {
   position: relative;
-  padding: 5vh 0;
   overflow: hidden;
 }
 
 #background-main {
-  height: 90vh;
-  max-height: 90vh;
-  align-items: stretch;
-  flex-wrap: nowrap;
-}
-
-#background-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 100%;
-
-  #background-title {
-    flex-shrink: 0;
-  }
-
-  #background-list {
-    margin-right: 40px;
-    margin-top: 3em;
-  }
-}
-
-#background-text {
   display: flex;
-  margin-top: 10vh;
-  margin-left: 5vw;
-  height: 65vh;
-  min-height: 0;
+  align-items: center;
+
+  #background-left {
+    height: fit-content;
+
+    #background-title {
+      flex-shrink: 0;
+    }
+
+    #background-list {
+      margin-right: 40px;
+      margin-top: 3em;
+    }
+  }
+
+  #background-text {
+    display: flex;
+    height: 65vh;
+    min-height: 0;
+    min-width: 0;
+  }
 }
 
 #background-title-shadow {

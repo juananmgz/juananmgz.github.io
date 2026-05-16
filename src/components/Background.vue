@@ -13,7 +13,7 @@
         </div>
         <Menu id="background-list" :categories="categories" @select="onSelect" />
       </div>
-      <div id="background-text" class="col-7">
+      <div id="background-text" class="col-6 offset-1">
         <Box :header="this.header" :text="this.selected && this.selected.desc" corners="top-right"></Box>
       </div>
     </div>

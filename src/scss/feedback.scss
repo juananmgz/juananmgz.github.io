@@ -1,37 +1,32 @@
 #feedback-container {
   position: relative;
-  padding: 5vh 0;
   overflow: hidden;
 }
 
 #feedback-main {
-  height: 90vh;
-  max-height: 90vh;
-  align-items: stretch;
-  flex-wrap: nowrap;
-}
-
-#feedback-left {
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 
-  #feedback-title {
-    flex-shrink: 0;
+  #feedback-left {
+    flex-direction: column;
+
+    #feedback-title {
+      flex-shrink: 0;
+    }
+
+    #feedback-list {
+      margin-right: 40px;
+      margin-top: 3em;
+    }
   }
 
-  #feedback-list {
-    flex: 1;
-    margin-right: 40px;
-    margin-top: 3em;
+  #feedback-text {
+    display: flex;
+    height: 65vh;
+    min-height: 0;
+    min-width: 0;
   }
-}
-
-#feedback-text {
-  display: flex;
-  margin-top: 10vh;
-  margin-left: 5vw;
-  height: 65vh;
-  min-height: 0;
 }
 
 #feedback-title-shadow {
