@@ -77,7 +77,7 @@ export default {
             this.currentSectionIndex = bestIdx;
           }
         },
-        { root: wrapper, threshold: [0.5, 0.75, 1] }
+        { root: wrapper, threshold: [0.5, 0.75, 1] },
       );
 
       sections.forEach((s) => this.observer.observe(s));
