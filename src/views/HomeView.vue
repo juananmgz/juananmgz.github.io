@@ -124,28 +124,30 @@ export default {
       const INNER_SCROLL_FACTOR = 0.35;
 
       this.onWheel = (e) => {
-        const { dy, dx } = this.normalizeDelta(e);
-        if (Math.abs(dy) <= Math.abs(dx)) return;
-        const scrollable = this.findScrollableAncestor(e.target, dy);
-        if (scrollable) {
-          if (e.cancelable) e.preventDefault();
-          scrollable.scrollTop += dy * INNER_SCROLL_FACTOR;
-          this.innerScrollActive = true;
-          clearTimeout(this.innerScrollTimer);
-          this.innerScrollTimer = setTimeout(() => {
-            this.innerScrollActive = false;
-          }, INNER_IDLE_MS);
-          return;
-        }
-        if (this.innerScrollActive) {
-          clearTimeout(this.innerScrollTimer);
-          this.innerScrollTimer = setTimeout(() => {
-            this.innerScrollActive = false;
-          }, INNER_IDLE_MS);
-          if (e.cancelable) e.preventDefault();
-          return;
-        }
         if (e.cancelable) e.preventDefault();
+        const { dy, dx } = this.normalizeDelta(e);
+        const isHorizontal = Math.abs(dx) > Math.abs(dy);
+        const dominant = isHorizontal ? dx : dy;
+
+        if (!isHorizontal) {
+          const scrollable = this.findScrollableAncestor(e.target, dy);
+          if (scrollable) {
+            scrollable.scrollTop += dy * INNER_SCROLL_FACTOR;
+            this.innerScrollActive = true;
+            clearTimeout(this.innerScrollTimer);
+            this.innerScrollTimer = setTimeout(() => {
+              this.innerScrollActive = false;
+            }, INNER_IDLE_MS);
+            return;
+          }
+          if (this.innerScrollActive) {
+            clearTimeout(this.innerScrollTimer);
+            this.innerScrollTimer = setTimeout(() => {
+              this.innerScrollActive = false;
+            }, INNER_IDLE_MS);
+            return;
+          }
+        }
 
         clearTimeout(this.idleTimer);
         this.idleTimer = setTimeout(() => {
@@ -155,7 +157,7 @@ export default {
 
         if (this.wheelLock) return;
 
-        this.wheelAccum += dy;
+        this.wheelAccum += dominant;
         if (Math.abs(this.wheelAccum) < THRESHOLD) return;
 
         const dir = this.wheelAccum > 0 ? 1 : -1;
