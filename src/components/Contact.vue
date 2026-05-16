@@ -38,7 +38,7 @@
   </div>
 
   <div id="contact-title-shadow" class="title-shadow">
-    <h1 v-html="this.title"></h1>
+    <h1 v-html="this.backgroundText.join('<br />')"></h1>
   </div>
 </template>
 
@@ -51,6 +51,7 @@ export default {
   data: function () {
     return {
       title: contact.en.title,
+      backgroundText: contact.en.backgroundText,
       paragraph: contact.en.paragraph,
       name: contact.en.name,
       email: contact.en.email,

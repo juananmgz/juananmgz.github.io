@@ -1,6 +1,7 @@
 const feedback = {
   en: {
     title: `Feedback`,
+    backgroundText: ["Feedback"],
     paragraph: [
       `My partners left comments about my work-staying. Some of them are translated, but originals can be found in my linkedin profile ;)`,
     ],

@@ -1,7 +1,7 @@
 <template>
   <div id="background-container" class="container-fluid section">
     <div id="background-title-shadow" class="title-shadow">
-      <h1 v-html="this.title"></h1>
+      <h1 v-html="this.backgroundText.join('<br />')"></h1>
     </div>
     <div id="background-main" class="row">
       <div id="background-left" class="col-5">
@@ -37,6 +37,7 @@ export default {
   data: function () {
     return {
       title: background.en.title,
+      backgroundText: background.en.backgroundText,
       paragraph: background.en.paragraph,
       categories: background.en.categories,
       selected: null,

@@ -19,6 +19,7 @@ $transparent: rgba(255, 255, 255, 0);
 
 @import url("https://fonts.cdnfonts.com/css/inter");
 @import url("https://fonts.cdnfonts.com/css/krona-one");
+@import url("https://fonts.cdnfonts.com/css/wilzten");
 
 body {
   * {
@@ -56,10 +57,14 @@ body {
   h4,
   h5 {
     font-family: "Krona One", sans-serif;
-    color: transparent;
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: $highlight;
-    text-transform: uppercase;
+    color: $highlight;
+
+    &.outlined,
+    & *.outlined {
+      color: transparent;
+      -webkit-text-stroke-width: 0.1rem;
+      -webkit-text-stroke-color: $highlight;
+    }
 
     &::selection {
       -webkit-text-stroke-color: $wine;
@@ -222,8 +227,10 @@ html {
   white-space: nowrap;
   overflow: hidden;
 
-  opacity: 0.03;
+  opacity: 0.015;
   font-size: 3vw;
+
+  padding: 50px;
 
   z-index: -5;
 
@@ -231,6 +238,7 @@ html {
   h2,
   h3 {
     margin: 0;
+    font-family: "Wilzten", sans-serif;
   }
 
   /* No selectable */

@@ -1,7 +1,7 @@
 <template>
   <div id="feedback-container" class="container-fluid section">
     <div id="feedback-title-shadow" class="title-shadow">
-      <h1 v-html="this.title"></h1>
+      <h1 v-html="this.backgroundText.join('<br />')"></h1>
     </div>
     <div id="feedback-main" class="row">
       <div id="feedback-left" class="col-5">
@@ -37,6 +37,7 @@ export default {
   data: function () {
     return {
       title: feedback.en.title,
+      backgroundText: feedback.en.backgroundText,
       paragraph: feedback.en.paragraph,
       categories: feedback.en.categories,
       selected: null,

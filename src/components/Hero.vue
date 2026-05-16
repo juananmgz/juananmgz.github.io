@@ -5,7 +5,7 @@
         <div id="text-column" class="col-6 offset-1">
           <div id="hero-title">
             <h1 class="hero-my-name">JUAN ANTONIO MUÑOZ GÓMEZ</h1>
-            <h2><span class="hero-frontend">FRONTEND</span> <span class="hero-developer">DEVELOPER</span></h2>
+            <h2><span class="hero-frontend">FRONTEND</span> <span class="hero-developer outlined">DEVELOPER</span></h2>
             <div id="hero-buttons">
               <a href="/documents/CV.pdf" download="CV_Juan_Antonio_Munoz_Gomez.pdf"><button>Download CV</button></a>
               <button @click="scrollToSection">Contact Me</button>
@@ -19,19 +19,21 @@
     </div>
 
     <div id="hero-title-shadow" class="title-shadow">
-      <h1>FRONTEND<br />DEVELOPER</h1>
+      <h1 v-html="backgroundText.join('<br />')"></h1>
     </div>
   </div>
 </template>
 
 <script>
 import image from "@/assets/images/hero-profile-pic.webp";
+import hero from "@/assets/messages/hero.js";
 
 export default {
   name: "Header",
   data: function () {
     return {
       image,
+      backgroundText: hero.en.backgroundText,
     };
   },
   methods: {

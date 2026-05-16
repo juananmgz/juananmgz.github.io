@@ -1,6 +1,7 @@
 const summary = {
   en: {
     title: `In a nutshell,`,
+    backgroundText: ["Nutshell"],
     paragraph: [
       `I'm a <span class="highlight">Front-End Developer</span> who fell into <span class="highlight">UI/UX</span> and never left. Four years turning messy requirements into interfaces people actually want to use — the kind that ship, get praised, and don't haunt the backlog.`,
       `Right now, I lead the front-end and UX direction at Concentrio AG, where I revamped the product into what the client called "more usable, fresh, and professional". Since 2024, I also serve as <span class="highlight">Scrum Master</span>, which pulled <span class="highlight">+20% velocity</span> and <span class="highlight">+15% sprint goal completion</span> out of the team.`,

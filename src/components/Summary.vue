@@ -1,7 +1,7 @@
 <template>
   <div id="summary-container" class="container-fluid section">
     <div id="summary-title-shadow" class="title-shadow">
-      <h1 v-html="this.title"></h1>
+      <h1 v-html="this.backgroundText.join('<br />')"></h1>
     </div>
     <div id="summary-main" class="row">
       <div id="summary-content" class="col-10 offset-1">
@@ -27,6 +27,7 @@ export default {
   data: function () {
     return {
       title: summary.en.title,
+      backgroundText: summary.en.backgroundText,
       paragraph: summary.en.paragraph,
     };
   },

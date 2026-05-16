@@ -13,10 +13,10 @@
   </div>
   <div id="about-me-title-shadow">
     <div id="coding-title-shadow" class="title-shadow">
-      <h1 v-html="this.coding.title"></h1>
+      <h1 v-html="this.coding.backgroundText.join('<br />')"></h1>
     </div>
     <div id="design-title-shadow" class="title-shadow">
-      <h1 v-html="this.design.title"></h1>
+      <h1 v-html="this.design.backgroundText.join('<br />')"></h1>
     </div>
   </div>
 </template>
@@ -37,10 +37,12 @@ export default {
     return {
       coding: {
         title: aboutMe.en.coding.title,
+        backgroundText: aboutMe.en.coding.backgroundText,
         desc: aboutMe.en.coding.desc,
       },
       design: {
         title: aboutMe.en.design.title,
+        backgroundText: aboutMe.en.design.backgroundText,
         desc: aboutMe.en.design.desc,
       },
     };

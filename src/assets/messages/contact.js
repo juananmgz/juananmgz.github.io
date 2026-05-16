@@ -1,6 +1,7 @@
 const contact = {
   en: {
     title: `Get in touch`,
+    backgroundText: ["Contact"],
     paragraph: [
       `Got a question or proposal, or just want to say hello? Feel free to reach out!`,
       `My inbox is open and I’m currently exploring new opportunities!`,
