@@ -10,7 +10,13 @@
               <p v-if="header.subheadline" class="box-header-subheadline">{{ this.header.subheadline }}</p>
             </transition>
             <transition name="header-collapse">
-              <p v-if="header.subcomment" class="box-header-subcomment">{{ this.header.subcomment }}</p>
+              <p v-if="header.subcomment" class="box-header-subcomment">
+                <template v-if="typeof header.subcomment === 'object'">
+                  <span v-if="header.subcomment.company" class="box-header-subcomment-company">{{ header.subcomment.company }}</span>
+                  <span v-if="header.subcomment.date" class="box-header-subcomment-date">{{ header.subcomment.date }}</span>
+                </template>
+                <template v-else>{{ header.subcomment }}</template>
+              </p>
             </transition>
           </div>
         </div>

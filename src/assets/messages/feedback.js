@@ -14,7 +14,7 @@ const feedback = {
             key: "andreas",
             title: "Andreas Steinhausen",
             position: "Technical Lead",
-            duration: "Concentrio AG",
+            duration: { company: "Concentrio AG", date: "April 29, 2025" },
             imgURL: `/images/feedback/feedback-andreas.png`,
             desc: [
               `I had the opportunity to collaborate with Juan for two years at Concentrio AG, where I worked as the Technical Lead and he contributed as a Front-End Developer and UX Expert. During that time, Juan proved himself to be a <span class="highlight">highly reliable, responsible, and creative</span> professional with a strong sense of teamwork and an exceptionally positive attitude.`,
@@ -26,7 +26,7 @@ const feedback = {
             key: "rocio",
             title: "Rocío Álvarez González",
             position: "HR Manager",
-            duration: "Concentrio AG",
+            duration: { company: "Concentrio AG", date: "March 5, 2025" },
             imgURL: `/images/feedback/feedback-rocio.jpeg`,
             desc: [
               `I had the pleasure of working with Juanan for two years, and I can confidently say that he is an extremely <span class="highlight">versatile, motivated, and reliable</span> professional. Juanan brings a positive attitude and energy to every project, always tackling challenges with enthusiasm and a practical mindset. His ability to deliver high-quality work while ensuring that the results are both useful and efficient sets him apart.`,
@@ -39,7 +39,7 @@ const feedback = {
             key: "guillem",
             title: "Guillem Tizne Mena",
             position: "Senior Back-End Developer",
-            duration: "Concentrio AG",
+            duration: { company: "Concentrio AG", date: "April 2, 2024" },
             imgURL: `/images/feedback/feedback-guillem.jpeg`,
             desc: [
               `I have had the pleasure of working closely with Juan Antonio for almost two years and have been impressed by his development skills. He demonstrates a deep understanding of web technologies and consistently delivers high-quality solutions.`,
@@ -56,7 +56,7 @@ const feedback = {
             key: "arturo",
             title: "Arturo Melero",
             position: "Strategic Creative Director",
-            duration: "Monobo",
+            duration: { company: "Monobo", date: "October 6, 2022" },
             imgURL: `/images/feedback/feedback-arturo.jpeg`,
             desc: [
               `It’s been a pleasant surprise to meet Juanan. Involved and commited with every project, with a great independence in the performance and very resolutive, within the deadlines.`,
@@ -67,7 +67,7 @@ const feedback = {
             key: "fran",
             title: "Fran Hurtado",
             position: "Fullstack Developer",
-            duration: "Monobo",
+            duration: { company: "Monobo", date: "December 22, 2022" },
             imgURL: `/images/feedback/feedback-fran.jpeg`,
             desc: [
               `I have been lucky to work with Juanan for several months at Monobo. He is an active person, who gets involved in every step of a project and is always willing to contribute. He has a gift and is very disposable to learn new tools, as well as being able to work both individually and as part of a team. He is a cheerful person who instills very good vibes and improves the team.`,

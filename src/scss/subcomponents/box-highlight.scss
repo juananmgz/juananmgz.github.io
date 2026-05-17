@@ -5,13 +5,13 @@ $thickness: 1px;
 $scrollbar-margin: 20px;
 
 @mixin highlight-container($orientation, $tl, $tr, $bl, $br) {
-  background: linear-gradient($orientation, $highlight 0, $highlight 40%, $transparent 70%);
+  background: linear-gradient($orientation, var(--color-highlight) 0, var(--color-highlight) 40%, var(--color-transparent) 70%);
 
   border-radius: $tl $tr $bl $br;
 }
 
 @mixin background-container($orientation) {
-  background: linear-gradient($orientation, $bg 0, $bg 70%, $transparent 90%);
+  background: linear-gradient($orientation, var(--color-bg) 0, var(--color-bg) 70%, var(--color-transparent) 90%);
 }
 
 .box-highlight-wrap {
@@ -36,7 +36,7 @@ $scrollbar-margin: 20px;
 }
 
 .box-highlight {
-  background: $highlight;
+  background: var(--color-highlight);
   padding: $thickness;
   height: 100%;
 
@@ -89,7 +89,7 @@ $scrollbar-margin: 20px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: $text;
+    background-color: var(--color-text);
     border-radius: 6px;
   }
 }

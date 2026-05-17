@@ -1,5 +1,5 @@
 @mixin hero-gradient() {
-  background: -webkit-linear-gradient(180deg, #ecc283, #c79b59, #ecc283);
+  background: -webkit-linear-gradient(180deg, var(--color-highlight), var(--color-highlight-dark), var(--color-highlight));
 }
 
 #hero-container {

@@ -1,20 +1,22 @@
 /* ----------------------------------------
-    COLORS 
+    COLORS
  ---------------------------------------- */
 
-$bg: #15181b;
-$text: #f9f9f9;
-$text-disabled: #848484;
-
-$highlight: #ecc283;
-$wine: #7e2020;
-
-$black: #000000;
-$white: #ffffff;
-$transparent: rgba(255, 255, 255, 0);
+:root {
+  --color-bg: #15181b;
+  --color-text: #f9f9f9;
+  --color-text-disabled: #848484;
+  --color-highlight: #ecc283;
+  --color-highlight-rgb: 236, 194, 131;
+  --color-highlight-dark: #c79b59;
+  --color-wine: #7e2020;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-transparent: rgba(255, 255, 255, 0);
+}
 
 /* ----------------------------------------
-    FONTS 
+    FONTS
  ---------------------------------------- */
 
 @import url("https://fonts.cdnfonts.com/css/inter");
@@ -57,18 +59,18 @@ body {
   h4,
   h5 {
     font-family: "Krona One", sans-serif;
-    color: $highlight;
+    color: var(--color-highlight);
 
     &.outlined,
     & *.outlined {
       color: transparent;
       -webkit-text-stroke-width: 0.1rem;
-      -webkit-text-stroke-color: $highlight;
+      -webkit-text-stroke-color: var(--color-highlight);
     }
 
     &::selection {
-      -webkit-text-stroke-color: $wine;
-      background: $text;
+      -webkit-text-stroke-color: var(--color-wine);
+      background: var(--color-text);
       color: transparent;
     }
   }
@@ -98,7 +100,7 @@ body {
 }
 
 /* ----------------------------------------
-    SECTIONS 
+    SECTIONS
  ---------------------------------------- */
 
 body {
@@ -107,17 +109,17 @@ body {
   overflow: hidden;
   height: 100vh;
   background: linear-gradient(114deg, rgba(18, 18, 19, 0.4) 3.04%, rgba(33, 40, 44, 0.3) 21.89%, rgba(6, 2, 2, 0.4) 80.02%), linear-gradient(63deg, #15181b 48.35%, #161b1f 57.48%, #12181f 64.42%);
-  background-attachment: fixed; /* Keeps the background fixed in place */
-  background-size: cover; /* Ensures the gradient covers the element */
-  background-position: center; /* Centers the gradient */
-  height: 100vh; /* Full viewport height */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 
   * {
-    color: $text;
+    color: var(--color-text);
 
     &::selection {
-      color: $bg;
-      background: $text;
+      color: var(--color-bg);
+      background: var(--color-text);
     }
   }
 
@@ -127,23 +129,23 @@ body {
     &,
     * {
       font-family: "Krona One", sans-serif;
-      color: $highlight;
+      color: var(--color-highlight);
     }
     &.selected,
     &.selected * {
-      color: $text;
+      color: var(--color-text);
     }
 
     &::selection,
     &::selection * {
-      color: $wine;
+      color: var(--color-wine);
     }
   }
 
   /* Marker effect */
 
   .marker {
-    border-bottom: 2px solid $highlight;
+    border-bottom: 2px solid var(--color-highlight);
     padding: 2px 3px;
     line-height: 1.5rem;
   }
@@ -217,6 +219,7 @@ html {
     line-height: 1.75em;
   }
 }
+
 .title-shadow {
   position: relative;
   left: 50%;
@@ -241,12 +244,12 @@ html {
   }
 
   /* No selectable */
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .paragraph-cluster {
@@ -272,15 +275,15 @@ li {
 }
 
 /* ----------------------------------------
-    BUTTONS 
+    BUTTONS
  ---------------------------------------- */
 
 button {
-  background: -webkit-linear-gradient(180deg, #ecc283, #c79b59, #ecc283);
+  background: -webkit-linear-gradient(180deg, var(--color-highlight), var(--color-highlight-dark), var(--color-highlight));
   font-family: "Krona One", sans-serif !important;
   text-transform: uppercase !important;
   color: black;
-  border: 1px solid rgba(236, 194, 131, 0.35);
+  border: 1px solid rgba(var(--color-highlight-rgb), 0.35);
   font-size: 1.2rem;
   padding: 15px 30px;
   transition: filter 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -288,8 +291,8 @@ button {
   &:hover,
   &[hover] {
     filter: brightness(0.85) saturate(1.1);
-    box-shadow: 0 2px 18px rgba(236, 194, 131, 0.25);
-    border-color: rgba(236, 194, 131, 0.7);
+    box-shadow: 0 2px 18px rgba(var(--color-highlight-rgb), 0.25);
+    border-color: rgba(var(--color-highlight-rgb), 0.7);
   }
 
   &:disabled,
@@ -303,7 +306,7 @@ button {
 }
 
 /* ----------------------------------------
-    COMPONENTS 
+    COMPONENTS
  ---------------------------------------- */
 
 @import "@/scss/subcomponents/box-highlight";

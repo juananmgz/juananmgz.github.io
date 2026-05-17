@@ -30,8 +30,8 @@
 }
 
 .diamond-rect {
-  fill: $highlight;
-  stroke: $highlight;
+  fill: var(--color-highlight);
+  stroke: var(--color-highlight);
   stroke-width: 0;
   transform-origin: center;
   transform-box: fill-box;

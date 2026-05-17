@@ -21,7 +21,7 @@
   }
 
   .box-header-headline {
-    color: $highlight;
+    color: var(--color-highlight);
   }
 
   .box-subheader {
@@ -32,6 +32,20 @@
     .box-header-subcomment {
       font-style: italic;
       margin-top: 4px !important;
+
+      .box-header-subcomment-date {
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background-color: currentColor;
+          vertical-align: middle;
+          margin: 0 8px;
+          opacity: 0.6;
+        }
+      }
     }
 
     .header-collapse-enter-active,
@@ -54,7 +68,7 @@
     }
   }
 
-  border-bottom: 1px solid $highlight;
+  border-bottom: 1px solid var(--color-highlight);
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
@@ -67,8 +81,8 @@
 
   figure {
     border-radius: 50%;
-    background: $bg;
-    border: 1px solid $highlight;
+    background: var(--color-bg);
+    border: 1px solid var(--color-highlight);
     margin: 0;
     width: 88px;
     height: 88px;
@@ -88,5 +102,6 @@
 .box-content {
   .margened {
     margin-left: 20px;
+    margin-top: 24px;
   }
 }

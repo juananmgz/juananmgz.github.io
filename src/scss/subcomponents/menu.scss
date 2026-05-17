@@ -30,7 +30,7 @@ $menu-anim-duration: 0.2s;
       top: 0;
       bottom: 0;
       width: 2px;
-      background: $highlight;
+      background: var(--color-highlight);
     }
 
     .main-cell {
@@ -54,7 +54,7 @@ $menu-anim-duration: 0.2s;
         right: -30px;
         height: 2px;
         width: 0;
-        background: $highlight;
+        background: var(--color-highlight);
         transition: width $menu-anim-duration cubic-bezier(1, 0.4, 0, 0.2);
       }
 
@@ -84,7 +84,7 @@ $menu-anim-duration: 0.2s;
     overflow: visible;
 
     rect {
-      stroke: $text;
+      stroke: var(--color-text);
       stroke-width: 3px;
       fill: transparent;
       transform-box: fill-box;
