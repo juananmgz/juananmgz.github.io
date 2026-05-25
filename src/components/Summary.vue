@@ -4,7 +4,7 @@
       <h1 v-html="this.backgroundText.join('<br />')"></h1>
     </div>
     <div id="summary-main" class="row">
-      <div id="summary-content" class="col-10 offset-1">
+      <div id="summary-content" class="col-5 offset-1">
         <h2 class="title" v-html="this.title"></h2>
         <Box :text="this.paragraph" corners="top-left"></Box>
       </div>

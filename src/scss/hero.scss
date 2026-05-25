@@ -58,11 +58,28 @@
     justify-content: end;
     align-items: end;
 
-    img {
+    #parallax-character {
+      position: relative;
       height: 90vh;
       width: auto;
-      object-fit: contain;
+      aspect-ratio: 1 / 1;
       margin-right: -120px;
+
+      img {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        bottom: -25%;
+        right: -35%;
+        object-fit: contain;
+        object-position: right bottom;
+      }
+
+      #layer-face,
+      #layer-eyes {
+        will-change: transform;
+        transition: transform 0.08s linear;
+      }
     }
   }
 }

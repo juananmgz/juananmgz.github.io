@@ -13,7 +13,27 @@
           </div>
         </div>
         <div id="picture-column" class="col-5">
-          <img :src="image" width="1286" height="1876" alt="Juan Antonio Muñoz Gómez" fetchpriority="high" decoding="async" />
+          <div id="parallax-character">
+            <img
+              id="layer-body"
+              :src="imgBody"
+              alt=""
+            />
+            <img
+              id="layer-face"
+              :src="imgFace"
+              alt=""
+              :style="layerStyle(1)"
+            />
+            <img
+              id="layer-eyes"
+              :src="imgEyes"
+              alt="Juan Antonio Muñoz Gómez"
+              fetchpriority="high"
+              decoding="async"
+              :style="layerStyle(2)"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -25,18 +45,42 @@
 </template>
 
 <script>
-import image from "@/assets/images/hero-profile-pic.webp";
+import imgBody from "@/assets/images/Juanan_flat__cuerpo.png";
+import imgFace from "@/assets/images/Juanan_flat__cara.png";
+import imgEyes from "@/assets/images/Juanan_flat__ojos.png";
 import hero from "@/assets/messages/hero.js";
+
+const DEPTHS = [0, 12, 22];
 
 export default {
   name: "Header",
-  data: function () {
+  data() {
     return {
-      image,
+      imgBody,
+      imgFace,
+      imgEyes,
       backgroundText: hero.en.backgroundText,
+      mouseX: 0,
+      mouseY: 0,
     };
   },
+  mounted() {
+    window.addEventListener("mousemove", this.onMouseMove);
+  },
+  beforeUnmount() {
+    window.removeEventListener("mousemove", this.onMouseMove);
+  },
   methods: {
+    onMouseMove(e) {
+      this.mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      this.mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    },
+    layerStyle(index) {
+      const d = DEPTHS[index];
+      const x = this.mouseX * d;
+      const y = this.mouseY * d;
+      return { transform: `translate(${x}px, ${y}px)` };
+    },
     scrollToSection() {
       const element = document.getElementById("contact-container");
       if (element) {
